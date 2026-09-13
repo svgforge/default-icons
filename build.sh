@@ -1,8 +1,9 @@
 #!/bin/sh
 
-svgforge -C config.json ./**/*.svg
+svgforge -C material.json  'material/./**/*.svg'
+svgforge -C tango.json  'tango/./**/*.svg'
 
-./serve.py --dir OUT/symbol &
+./serve.py --dir OUT &
 SERVER_PID=$!
 
 xdg-open "http://localhost:8000"
