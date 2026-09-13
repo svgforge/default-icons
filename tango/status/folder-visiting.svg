@@ -31,7 +31,7 @@
        id="perspective28" />
     <radialGradient
        inkscape:collect="always"
-       xlink:href="#linearGradient5060"
+       href="#linearGradient5060"
        id="radialGradient6719"
        gradientUnits="userSpaceOnUse"
        gradientTransform="matrix(-2.774389,0,0,1.969706,112.7623,-872.8854)"
@@ -54,7 +54,7 @@
     </linearGradient>
     <radialGradient
        inkscape:collect="always"
-       xlink:href="#linearGradient5060"
+       href="#linearGradient5060"
        id="radialGradient6717"
        gradientUnits="userSpaceOnUse"
        gradientTransform="matrix(2.774389,0,0,1.969706,-1891.633,-872.8854)"
@@ -80,7 +80,7 @@
     </linearGradient>
     <linearGradient
        inkscape:collect="always"
-       xlink:href="#linearGradient5048"
+       href="#linearGradient5048"
        id="linearGradient6715"
        gradientUnits="userSpaceOnUse"
        gradientTransform="matrix(2.774389,0,0,1.969706,-1892.179,-872.8854)"
@@ -106,7 +106,7 @@
        y1="36.103832"
        x1="23.150063"
        id="linearGradient4976"
-       xlink:href="#linearGradient4970"
+       href="#linearGradient4970"
        inkscape:collect="always" />
   </defs>
   <sodipodi:namedview

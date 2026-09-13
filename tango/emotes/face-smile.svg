@@ -49,7 +49,7 @@
        cx="29.288071"
        gradientUnits="userSpaceOnUse"
        id="radialGradient2714"
-       xlink:href="#linearGradient3290"
+       href="#linearGradient3290"
        inkscape:collect="always" />
     <linearGradient
        id="linearGradient2509">
@@ -127,7 +127,7 @@
        cy="38.571430"
        cx="24.714285"
        id="radialGradient4571"
-       xlink:href="#linearGradient4565"
+       href="#linearGradient4565"
        inkscape:collect="always" />
   </defs>
   <sodipodi:namedview

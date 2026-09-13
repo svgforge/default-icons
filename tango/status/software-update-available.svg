@@ -64,7 +64,7 @@
     </linearGradient>
     <radialGradient
        inkscape:collect="always"
-       xlink:href="#linearGradient5130"
+       href="#linearGradient5130"
        id="radialGradient5136"
        cx="22"
        cy="38.5"
@@ -87,7 +87,7 @@
     </filter>
     <radialGradient
        inkscape:collect="always"
-       xlink:href="#linearGradient5190"
+       href="#linearGradient5190"
        id="radialGradient5200"
        gradientUnits="userSpaceOnUse"
        gradientTransform="matrix(0,-1.2519025,47.292244,0,-1418.0196,57.3867)"
@@ -98,7 +98,7 @@
        r="18.888176" />
     <linearGradient
        inkscape:collect="always"
-       xlink:href="#linearGradient5202"
+       href="#linearGradient5202"
        id="linearGradient5208"
        x1="22.109375"
        y1="11.34375"
@@ -195,7 +195,7 @@
        sodipodi:type="inkscape:offset"
        inkscape:radius="-0.97009587"
        inkscape:original="M 22.09375 4.34375 L 17.5 11.59375 L 9.09375 9.71875 L 10.96875 18.125 L 3.71875 22.71875 L 10.96875 27.3125 L 9.09375 35.71875 L 17.5 33.84375 L 22.09375 41.09375 L 26.6875 33.84375 L 35.09375 35.71875 L 33.21875 27.3125 L 40.5 22.71875 L 33.21875 18.125 L 35.09375 9.71875 L 26.6875 11.59375 L 22.09375 4.34375 z "
-       xlink:href="#path4547"
+       href="#path4547"
        style="opacity:0.3373494;color:#000000;fill:none;fill-opacity:1;fill-rule:nonzero;stroke:url(#linearGradient5208);stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;marker:none;marker-start:none;marker-mid:none;marker-end:none;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
        id="path5198"
        inkscape:href="#path4547"

@@ -84,7 +84,7 @@
     </linearGradient>
     <radialGradient
        inkscape:collect="always"
-       xlink:href="#linearGradient19149"
+       href="#linearGradient19149"
        id="radialGradient19155"
        gradientTransform="scale(1.347925,0.741881)"
        cx="16.331211"
@@ -95,7 +95,7 @@
        gradientUnits="userSpaceOnUse" />
     <radialGradient
        inkscape:collect="always"
-       xlink:href="#linearGradient19149"
+       href="#linearGradient19149"
        id="radialGradient19161"
        gradientUnits="userSpaceOnUse"
        gradientTransform="scale(1.347925,0.741881)"
@@ -106,7 +106,7 @@
        r="26.594908" />
     <linearGradient
        inkscape:collect="always"
-       xlink:href="#linearGradient19270"
+       href="#linearGradient19270"
        id="linearGradient19175"
        gradientTransform="matrix(1.700880,0.000000,0.000000,0.587931,-1.374996,-7.214286)"
        x1="6.8835502"
@@ -116,7 +116,7 @@
        gradientUnits="userSpaceOnUse" />
     <linearGradient
        inkscape:collect="always"
-       xlink:href="#linearGradient19149"
+       href="#linearGradient19149"
        id="linearGradient19243"
        gradientUnits="userSpaceOnUse"
        gradientTransform="matrix(1.411264,0.000000,0.000000,0.708585,-1.517853,-6.857043)"
@@ -126,7 +126,7 @@
        y2="50.805479" />
     <radialGradient
        inkscape:collect="always"
-       xlink:href="#linearGradient19278"
+       href="#linearGradient19278"
        id="radialGradient19284"
        gradientTransform="scale(1.357519,0.736638)"
        cx="17.579761"
@@ -137,7 +137,7 @@
        gradientUnits="userSpaceOnUse" />
     <radialGradient
        inkscape:collect="always"
-       xlink:href="#linearGradient19474"
+       href="#linearGradient19474"
        id="radialGradient19480"
        gradientTransform="scale(1.287593,0.776643)"
        cx="30.873167"
@@ -148,7 +148,7 @@
        gradientUnits="userSpaceOnUse" />
     <radialGradient
        inkscape:collect="always"
-       xlink:href="#linearGradient19474"
+       href="#linearGradient19474"
        id="radialGradient19488"
        gradientUnits="userSpaceOnUse"
        gradientTransform="scale(1.287593,0.776643)"
@@ -159,7 +159,7 @@
        r="3.2488604" />
     <radialGradient
        inkscape:collect="always"
-       xlink:href="#linearGradient19474"
+       href="#linearGradient19474"
        id="radialGradient19494"
        gradientUnits="userSpaceOnUse"
        gradientTransform="scale(1.287593,0.776643)"
@@ -170,7 +170,7 @@
        r="3.2488604" />
     <radialGradient
        inkscape:collect="always"
-       xlink:href="#linearGradient19474"
+       href="#linearGradient19474"
        id="radialGradient19496"
        gradientUnits="userSpaceOnUse"
        gradientTransform="scale(1.287593,0.776643)"
@@ -181,7 +181,7 @@
        r="3.2488604" />
     <linearGradient
        inkscape:collect="always"
-       xlink:href="#linearGradient19149"
+       href="#linearGradient19149"
        id="linearGradient2479"
        gradientUnits="userSpaceOnUse"
        gradientTransform="matrix(1.411264,0.000000,0.000000,0.708585,-1.517853,-5.016059)"
@@ -191,7 +191,7 @@
        y2="50.805479" />
     <linearGradient
        inkscape:collect="always"
-       xlink:href="#linearGradient2497"
+       href="#linearGradient2497"
        id="linearGradient2503"
        gradientTransform="matrix(1.072527,0.000000,0.000000,0.932378,0.500000,0.750000)"
        x1="11.562314"

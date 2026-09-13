@@ -1,5 +1,5 @@
 {
-  "dest": "./OUT/tango",
+  "dest": "./dist/tango",
   "mode": {
     "symbol": {
       "sprite": "sprite.svg",

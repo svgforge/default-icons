@@ -56,7 +56,7 @@
     </linearGradient>
     <radialGradient
        inkscape:collect="always"
-       xlink:href="#linearGradient3558"
+       href="#linearGradient3558"
        id="radialGradient3564"
        cx="21.761711"
        cy="23.07144"
@@ -67,7 +67,7 @@
        gradientUnits="userSpaceOnUse" />
     <linearGradient
        inkscape:collect="always"
-       xlink:href="#linearGradient5783"
+       href="#linearGradient5783"
        id="linearGradient5789"
        x1="23.505953"
        y1="5.7753429"

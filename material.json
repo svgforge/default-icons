@@ -1,5 +1,5 @@
 {
-  "dest": "./OUT/material",
+  "dest": "./dist/material",
   "shape": {
     "transform": [
       {

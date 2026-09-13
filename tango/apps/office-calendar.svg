@@ -28,7 +28,7 @@
        id="perspective48" />
     <radialGradient
        inkscape:collect="always"
-       xlink:href="#linearGradient5060"
+       href="#linearGradient5060"
        id="radialGradient6719"
        gradientUnits="userSpaceOnUse"
        gradientTransform="matrix(-2.774389,0,0,1.969706,112.7623,-872.8854)"
@@ -51,7 +51,7 @@
     </linearGradient>
     <radialGradient
        inkscape:collect="always"
-       xlink:href="#linearGradient5060"
+       href="#linearGradient5060"
        id="radialGradient6717"
        gradientUnits="userSpaceOnUse"
        gradientTransform="matrix(2.774389,0,0,1.969706,-1891.633,-872.8854)"
@@ -77,7 +77,7 @@
     </linearGradient>
     <linearGradient
        inkscape:collect="always"
-       xlink:href="#linearGradient5048"
+       href="#linearGradient5048"
        id="linearGradient6715"
        gradientUnits="userSpaceOnUse"
        gradientTransform="matrix(2.774389,0,0,1.969706,-1892.179,-872.8854)"
@@ -131,7 +131,7 @@
        y1="14.428571"
        x1="13.357142"
        id="linearGradient2532"
-       xlink:href="#linearGradient2526"
+       href="#linearGradient2526"
        inkscape:collect="always" />
     <radialGradient
        gradientUnits="userSpaceOnUse"
@@ -142,7 +142,7 @@
        cy="29.000000"
        cx="26.000000"
        id="radialGradient2557"
-       xlink:href="#linearGradient2551"
+       href="#linearGradient2551"
        inkscape:collect="always" />
     <linearGradient
        gradientTransform="translate(0.000000,0.785718)"
@@ -152,7 +152,7 @@
        y1="30.785713"
        x1="6.7857148"
        id="linearGradient2569"
-       xlink:href="#linearGradient2563"
+       href="#linearGradient2563"
        inkscape:collect="always" />
     <linearGradient
        y2="28.428572"
@@ -162,7 +162,7 @@
        gradientTransform="translate(2.045771e-15,0.785718)"
        gradientUnits="userSpaceOnUse"
        id="linearGradient2582"
-       xlink:href="#linearGradient2526"
+       href="#linearGradient2526"
        inkscape:collect="always" />
   </defs>
   <sodipodi:namedview

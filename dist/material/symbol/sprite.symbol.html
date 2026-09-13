@@ -1,0 +1,1339 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>SVG &lt;symbol&gt; sprite preview | svg-sprite</title>
+
+    <style>
+    body {
+      padding: 0;
+      margin: 0;
+      color: #666;
+      background: #fafafa;
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 1em;
+      line-height: 1.4;
+    }
+
+    header {
+      display: block;
+      padding: 3em 3em 2em;
+      background-color: #fff;
+    }
+
+    header p {
+      margin: 2em 0 0;
+    }
+
+    section {
+      border-top: 1px solid #eee;
+      padding: 2em 3em 0;
+    }
+
+    .grid {
+      display: grid;
+      gap: clamp(1rem, 2.5vw, 2rem);
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+
+    .grid li {
+      background-color: #fff;
+      vertical-align: top;
+      border: 1px solid #ccc;
+      padding: 1em;
+      cursor: default;
+    }
+
+    .icon-box {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin: 0;
+      width: 100%;
+      height: 144px;
+      position: relative;
+      background: #ccc url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12'%3E%3Cpath fill='%23fff' d='M6 0h6v6H6zM0 6h6v6H0z'/%3E%3C/svg%3E") top left repeat;
+      border: 1px solid #ccc;
+    }
+
+    .icon {
+      display: inline-block;
+    }
+
+    h1 {
+      margin-top: 0;
+    }
+
+    .grid li figure {
+      margin: 0;
+      padding: 0;
+    }
+
+    .grid li figcaption .name {
+      display: block;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    .grid li figcaption .file-size {
+      font-size: .8em;
+      opacity: .7;
+    }
+
+    .grid li figcaption .meta {
+      display: flex;
+      align-items: center;
+      margin-top: .5em;
+    }
+
+    .grid li figcaption .meta .copy {
+      display: inline-block;
+      margin-left: auto;
+      padding: .05em .5em;
+      font-size: .65em;
+      line-height: 1.5;
+      color: #0f7595;
+      background: #fff;
+      border: 1px solid #0f7595;
+      border-radius: 3px;
+      cursor: pointer;
+    }
+
+    .grid li figcaption .meta .copy:hover {
+      background: #0f7595;
+      color: #fff;
+    }
+
+    .grid li figcaption .meta .copy:active {
+      background: #0b5f79;
+    }
+
+    .grid li figcaption .meta .copy.copied {
+      color: #0f7595;
+      border-color: #0f7595;
+      background: #e8f4f8;
+      cursor: default;
+    }
+
+    footer {
+      display: block;
+      margin: 0;
+      padding: 0 3em 3em;
+    }
+
+    footer p {
+      margin: 0;
+      font-size: .7em;
+    }
+
+    footer a {
+      color: #0f7595;
+      margin-left: 0;
+    }
+
+    /*
+    Sprite shape dimensions
+    ====================================================================================================
+    You will need to set the sprite shape dimensions via CSS when you use them as SVGs, otherwise
+    they would become a huge 100% in size. You may use the following dimension classes for doing so.
+    They might well be outsourced to an external stylesheet of course.
+    */
+
+     .svg-actions--add_circle-dims { width: 24px; height: 24px; }
+ .svg-actions--check-dims { width: 24px; height: 24px; }
+ .svg-actions--check_circle-dims { width: 24px; height: 24px; }
+ .svg-actions--delete-dims { width: 24px; height: 24px; }
+ .svg-actions--download-dims { width: 24px; height: 24px; }
+ .svg-actions--edit-dims { width: 24px; height: 24px; }
+ .svg-actions--select_check_box-dims { width: 24px; height: 24px; }
+ .svg-actions--settings-dims { width: 24px; height: 24px; }
+ .svg-actions--thumb_up-dims { width: 24px; height: 24px; }
+ .svg-actions--update-dims { width: 24px; height: 24px; }
+ .svg-communication--alternate_email-dims { width: 24px; height: 24px; }
+ .svg-communication--globe_uk-dims { width: 24px; height: 24px; }
+ .svg-communication--link_2-dims { width: 24px; height: 24px; }
+ .svg-communication--mail-dims { width: 24px; height: 24px; }
+ .svg-content--article-dims { width: 24px; height: 24px; }
+ .svg-content--bolt-dims { width: 24px; height: 24px; }
+ .svg-content--cycle-dims { width: 24px; height: 24px; }
+ .svg-content--diamond_shine-dims { width: 24px; height: 24px; }
+ .svg-content--filter_drama-dims { width: 24px; height: 24px; }
+ .svg-content--radio_button_checked-dims { width: 24px; height: 24px; }
+ .svg-navigation--arrow_forward-dims { width: 24px; height: 24px; }
+ .svg-navigation--home-dims { width: 24px; height: 24px; }
+ .svg-navigation--search-dims { width: 24px; height: 24px; }
+ .svg-people--back_hand-dims { width: 24px; height: 24px; }
+ .svg-people--face-dims { width: 24px; height: 24px; }
+ .svg-people--person-dims { width: 24px; height: 24px; }
+ .svg-people--psychiatry-dims { width: 24px; height: 24px; }
+ .svg-people--psychology-dims { width: 24px; height: 24px; }
+ .svg-people--sentiment_satisfied-dims { width: 24px; height: 24px; }
+ .svg-status--clock_loader_40-dims { width: 24px; height: 24px; }
+ .svg-status--deployed_code_update-dims { width: 24px; height: 24px; }
+ .svg-status--info-dims { width: 24px; height: 24px; }
+ .svg-status--planner_review-dims { width: 24px; height: 24px; }
+ .svg-status--schedule-dims { width: 24px; height: 24px; }
+    </style>
+
+  </head>
+  <body>
+
+
+    <header>
+      <h1>SVG <code>&lt;symbol&gt;</code> sprite preview</h1>
+      <p>This preview features the use of the generated sprite as an external SVG spritemap. Please have a look at the HTML source for further details and be aware of the following constraints:</p>
+      <ul class="grid">
+        <li>Your browser has to <a href="https://caniuse.com/svg-html5" target="_blank" rel="noopener noreferrer">support inline SVG</a> for these techniques to work.</li>
+      </ul>
+    </header>
+    <section>
+    </section>
+    <section>
+
+<!--
+B) Inline SVG with external sprite
+====================================================================================================
+These SVG images make use of an URL + fragment identifiers (IDs) and refer to the regular external
+SVG sprite. They may be styled via CSS.
+-->
+
+      <h3>B) Inline SVG with external sprite</h3>
+      <ul class="grid">
+        <li title="actions--add_circle">
+          <figure>
+            <div class="icon-box">
+              <svg class="svg-actions--add_circle-dims">
+                <use href="sprite.svg#actions--add_circle"></use>
+              </svg>
+            </div>
+            <figcaption title="actions--add_circle, 452 Bytes">
+              <span class="name">actions--add_circle</span>
+              <span class="meta">
+                <span class="file-size">452 Bytes</span>
+                <button type="button" class="copy" data-copy="actions--add_circle" data-copy-label="Copy ID">Copy ID</button>
+              </span>
+            </figcaption>
+          </figure>
+        </li>
+        <li title="actions--check">
+          <figure>
+            <div class="icon-box">
+              <svg class="svg-actions--check-dims">
+                <use href="sprite.svg#actions--check"></use>
+              </svg>
+            </div>
+            <figcaption title="actions--check, 163 Bytes">
+              <span class="name">actions--check</span>
+              <span class="meta">
+                <span class="file-size">163 Bytes</span>
+                <button type="button" class="copy" data-copy="actions--check" data-copy-label="Copy ID">Copy ID</button>
+              </span>
+            </figcaption>
+          </figure>
+        </li>
+        <li title="actions--check_circle">
+          <figure>
+            <div class="icon-box">
+              <svg class="svg-actions--check_circle-dims">
+                <use href="sprite.svg#actions--check_circle"></use>
+              </svg>
+            </div>
+            <figcaption title="actions--check_circle, 448 Bytes">
+              <span class="name">actions--check_circle</span>
+              <span class="meta">
+                <span class="file-size">448 Bytes</span>
+                <button type="button" class="copy" data-copy="actions--check_circle" data-copy-label="Copy ID">Copy ID</button>
+              </span>
+            </figcaption>
+          </figure>
+        </li>
+        <li title="actions--delete">
+          <figure>
+            <div class="icon-box">
+              <svg class="svg-actions--delete-dims">
+                <use href="sprite.svg#actions--delete"></use>
+              </svg>
+            </div>
+            <figcaption title="actions--delete, 304 Bytes">
+              <span class="name">actions--delete</span>
+              <span class="meta">
+                <span class="file-size">304 Bytes</span>
+                <button type="button" class="copy" data-copy="actions--delete" data-copy-label="Copy ID">Copy ID</button>
+              </span>
+            </figcaption>
+          </figure>
+        </li>
+        <li title="actions--download">
+          <figure>
+            <div class="icon-box">
+              <svg class="svg-actions--download-dims">
+                <use href="sprite.svg#actions--download"></use>
+              </svg>
+            </div>
+            <figcaption title="actions--download, 263 Bytes">
+              <span class="name">actions--download</span>
+              <span class="meta">
+                <span class="file-size">263 Bytes</span>
+                <button type="button" class="copy" data-copy="actions--download" data-copy-label="Copy ID">Copy ID</button>
+              </span>
+            </figcaption>
+          </figure>
+        </li>
+        <li title="actions--edit">
+          <figure>
+            <div class="icon-box">
+              <svg class="svg-actions--edit-dims">
+                <use href="sprite.svg#actions--edit"></use>
+              </svg>
+            </div>
+            <figcaption title="actions--edit, 314 Bytes">
+              <span class="name">actions--edit</span>
+              <span class="meta">
+                <span class="file-size">314 Bytes</span>
+                <button type="button" class="copy" data-copy="actions--edit" data-copy-label="Copy ID">Copy ID</button>
+              </span>
+            </figcaption>
+          </figure>
+        </li>
+        <li title="actions--select_check_box">
+          <figure>
+            <div class="icon-box">
+              <svg class="svg-actions--select_check_box-dims">
+                <use href="sprite.svg#actions--select_check_box"></use>
+              </svg>
+            </div>
+            <figcaption title="actions--select_check_box, 307 Bytes">
+              <span class="name">actions--select_check_box</span>
+              <span class="meta">
+                <span class="file-size">307 Bytes</span>
+                <button type="button" class="copy" data-copy="actions--select_check_box" data-copy-label="Copy ID">Copy ID</button>
+              </span>
+            </figcaption>
+          </figure>
+        </li>
+        <li title="actions--settings">
+          <figure>
+            <div class="icon-box">
+              <svg class="svg-actions--settings-dims">
+                <use href="sprite.svg#actions--settings"></use>
+              </svg>
+            </div>
+            <figcaption title="actions--settings, 756 Bytes">
+              <span class="name">actions--settings</span>
+              <span class="meta">
+                <span class="file-size">756 Bytes</span>
+                <button type="button" class="copy" data-copy="actions--settings" data-copy-label="Copy ID">Copy ID</button>
+              </span>
+            </figcaption>
+          </figure>
+        </li>
+        <li title="actions--thumb_up">
+          <figure>
+            <div class="icon-box">
+              <svg class="svg-actions--thumb_up-dims">
+                <use href="sprite.svg#actions--thumb_up"></use>
+              </svg>
+            </div>
+            <figcaption title="actions--thumb_up, 339 Bytes">
+              <span class="name">actions--thumb_up</span>
+              <span class="meta">
+                <span class="file-size">339 Bytes</span>
+                <button type="button" class="copy" data-copy="actions--thumb_up" data-copy-label="Copy ID">Copy ID</button>
+              </span>
+            </figcaption>
+          </figure>
+        </li>
+        <li title="actions--update">
+          <figure>
+            <div class="icon-box">
+              <svg class="svg-actions--update-dims">
+                <use href="sprite.svg#actions--update"></use>
+              </svg>
+            </div>
+            <figcaption title="actions--update, 433 Bytes">
+              <span class="name">actions--update</span>
+              <span class="meta">
+                <span class="file-size">433 Bytes</span>
+                <button type="button" class="copy" data-copy="actions--update" data-copy-label="Copy ID">Copy ID</button>
+              </span>
+            </figcaption>
+          </figure>
+        </li>
+        <li title="communication--alternate_email">
+          <figure>
+            <div class="icon-box">
+              <svg class="svg-communication--alternate_email-dims">
+                <use href="sprite.svg#communication--alternate_email"></use>
+              </svg>
+            </div>
+            <figcaption title="communication--alternate_email, 597 Bytes">
+              <span class="name">communication--alternate_email</span>
+              <span class="meta">
+                <span class="file-size">597 Bytes</span>
+                <button type="button" class="copy" data-copy="communication--alternate_email" data-copy-label="Copy ID">Copy ID</button>
+              </span>
+            </figcaption>
+          </figure>
+        </li>
+        <li title="communication--globe_uk">
+          <figure>
+            <div class="icon-box">
+              <svg class="svg-communication--globe_uk-dims">
+                <use href="sprite.svg#communication--globe_uk"></use>
+              </svg>
+            </div>
+            <figcaption title="communication--globe_uk, 723 Bytes">
+              <span class="name">communication--globe_uk</span>
+              <span class="meta">
+                <span class="file-size">723 Bytes</span>
+                <button type="button" class="copy" data-copy="communication--globe_uk" data-copy-label="Copy ID">Copy ID</button>
+              </span>
+            </figcaption>
+          </figure>
+        </li>
+        <li title="communication--link_2">
+          <figure>
+            <div class="icon-box">
+              <svg class="svg-communication--link_2-dims">
+                <use href="sprite.svg#communication--link_2"></use>
+              </svg>
+            </div>
+            <figcaption title="communication--link_2, 497 Bytes">
+              <span class="name">communication--link_2</span>
+              <span class="meta">
+                <span class="file-size">497 Bytes</span>
+                <button type="button" class="copy" data-copy="communication--link_2" data-copy-label="Copy ID">Copy ID</button>
+              </span>
+            </figcaption>
+          </figure>
+        </li>
+        <li title="communication--mail">
+          <figure>
+            <div class="icon-box">
+              <svg class="svg-communication--mail-dims">
+                <use href="sprite.svg#communication--mail"></use>
+              </svg>
+            </div>
+            <figcaption title="communication--mail, 313 Bytes">
+              <span class="name">communication--mail</span>
+              <span class="meta">
+                <span class="file-size">313 Bytes</span>
+                <button type="button" class="copy" data-copy="communication--mail" data-copy-label="Copy ID">Copy ID</button>
+              </span>
+            </figcaption>
+          </figure>
+        </li>
+        <li title="content--article">
+          <figure>
+            <div class="icon-box">
+              <svg class="svg-content--article-dims">
+                <use href="sprite.svg#content--article"></use>
+              </svg>
+            </div>
+            <figcaption title="content--article, 335 Bytes">
+              <span class="name">content--article</span>
+              <span class="meta">
+                <span class="file-size">335 Bytes</span>
+                <button type="button" class="copy" data-copy="content--article" data-copy-label="Copy ID">Copy ID</button>
+              </span>
+            </figcaption>
+          </figure>
+        </li>
+        <li title="content--bolt">
+          <figure>
+            <div class="icon-box">
+              <svg class="svg-content--bolt-dims">
+                <use href="sprite.svg#content--bolt"></use>
+              </svg>
+            </div>
+            <figcaption title="content--bolt, 220 Bytes">
+              <span class="name">content--bolt</span>
+              <span class="meta">
+                <span class="file-size">220 Bytes</span>
+                <button type="button" class="copy" data-copy="content--bolt" data-copy-label="Copy ID">Copy ID</button>
+              </span>
+            </figcaption>
+          </figure>
+        </li>
+        <li title="content--cycle">
+          <figure>
+            <div class="icon-box">
+              <svg class="svg-content--cycle-dims">
+                <use href="sprite.svg#content--cycle"></use>
+              </svg>
+            </div>
+            <figcaption title="content--cycle, 521 Bytes">
+              <span class="name">content--cycle</span>
+              <span class="meta">
+                <span class="file-size">521 Bytes</span>
+                <button type="button" class="copy" data-copy="content--cycle" data-copy-label="Copy ID">Copy ID</button>
+              </span>
+            </figcaption>
+          </figure>
+        </li>
+        <li title="content--diamond_shine">
+          <figure>
+            <div class="icon-box">
+              <svg class="svg-content--diamond_shine-dims">
+                <use href="sprite.svg#content--diamond_shine"></use>
+              </svg>
+            </div>
+            <figcaption title="content--diamond_shine, 305 Bytes">
+              <span class="name">content--diamond_shine</span>
+              <span class="meta">
+                <span class="file-size">305 Bytes</span>
+                <button type="button" class="copy" data-copy="content--diamond_shine" data-copy-label="Copy ID">Copy ID</button>
+              </span>
+            </figcaption>
+          </figure>
+        </li>
+        <li title="content--filter_drama">
+          <figure>
+            <div class="icon-box">
+              <svg class="svg-content--filter_drama-dims">
+                <use href="sprite.svg#content--filter_drama"></use>
+              </svg>
+            </div>
+            <figcaption title="content--filter_drama, 437 Bytes">
+              <span class="name">content--filter_drama</span>
+              <span class="meta">
+                <span class="file-size">437 Bytes</span>
+                <button type="button" class="copy" data-copy="content--filter_drama" data-copy-label="Copy ID">Copy ID</button>
+              </span>
+            </figcaption>
+          </figure>
+        </li>
+        <li title="content--radio_button_checked">
+          <figure>
+            <div class="icon-box">
+              <svg class="svg-content--radio_button_checked-dims">
+                <use href="sprite.svg#content--radio_button_checked"></use>
+              </svg>
+            </div>
+            <figcaption title="content--radio_button_checked, 511 Bytes">
+              <span class="name">content--radio_button_checked</span>
+              <span class="meta">
+                <span class="file-size">511 Bytes</span>
+                <button type="button" class="copy" data-copy="content--radio_button_checked" data-copy-label="Copy ID">Copy ID</button>
+              </span>
+            </figcaption>
+          </figure>
+        </li>
+        <li title="navigation--arrow_forward">
+          <figure>
+            <div class="icon-box">
+              <svg class="svg-navigation--arrow_forward-dims">
+                <use href="sprite.svg#navigation--arrow_forward"></use>
+              </svg>
+            </div>
+            <figcaption title="navigation--arrow_forward, 175 Bytes">
+              <span class="name">navigation--arrow_forward</span>
+              <span class="meta">
+                <span class="file-size">175 Bytes</span>
+                <button type="button" class="copy" data-copy="navigation--arrow_forward" data-copy-label="Copy ID">Copy ID</button>
+              </span>
+            </figcaption>
+          </figure>
+        </li>
+        <li title="navigation--home">
+          <figure>
+            <div class="icon-box">
+              <svg class="svg-navigation--home-dims">
+                <use href="sprite.svg#navigation--home"></use>
+              </svg>
+            </div>
+            <figcaption title="navigation--home, 228 Bytes">
+              <span class="name">navigation--home</span>
+              <span class="meta">
+                <span class="file-size">228 Bytes</span>
+                <button type="button" class="copy" data-copy="navigation--home" data-copy-label="Copy ID">Copy ID</button>
+              </span>
+            </figcaption>
+          </figure>
+        </li>
+        <li title="navigation--search">
+          <figure>
+            <div class="icon-box">
+              <svg class="svg-navigation--search-dims">
+                <use href="sprite.svg#navigation--search"></use>
+              </svg>
+            </div>
+            <figcaption title="navigation--search, 361 Bytes">
+              <span class="name">navigation--search</span>
+              <span class="meta">
+                <span class="file-size">361 Bytes</span>
+                <button type="button" class="copy" data-copy="navigation--search" data-copy-label="Copy ID">Copy ID</button>
+              </span>
+            </figcaption>
+          </figure>
+        </li>
+        <li title="people--back_hand">
+          <figure>
+            <div class="icon-box">
+              <svg class="svg-people--back_hand-dims">
+                <use href="sprite.svg#people--back_hand"></use>
+              </svg>
+            </div>
+            <figcaption title="people--back_hand, 522 Bytes">
+              <span class="name">people--back_hand</span>
+              <span class="meta">
+                <span class="file-size">522 Bytes</span>
+                <button type="button" class="copy" data-copy="people--back_hand" data-copy-label="Copy ID">Copy ID</button>
+              </span>
+            </figcaption>
+          </figure>
+        </li>
+        <li title="people--face">
+          <figure>
+            <div class="icon-box">
+              <svg class="svg-people--face-dims">
+                <use href="sprite.svg#people--face"></use>
+              </svg>
+            </div>
+            <figcaption title="people--face, 833 Bytes">
+              <span class="name">people--face</span>
+              <span class="meta">
+                <span class="file-size">833 Bytes</span>
+                <button type="button" class="copy" data-copy="people--face" data-copy-label="Copy ID">Copy ID</button>
+              </span>
+            </figcaption>
+          </figure>
+        </li>
+        <li title="people--person">
+          <figure>
+            <div class="icon-box">
+              <svg class="svg-people--person-dims">
+                <use href="sprite.svg#people--person"></use>
+              </svg>
+            </div>
+            <figcaption title="people--person, 558 Bytes">
+              <span class="name">people--person</span>
+              <span class="meta">
+                <span class="file-size">558 Bytes</span>
+                <button type="button" class="copy" data-copy="people--person" data-copy-label="Copy ID">Copy ID</button>
+              </span>
+            </figcaption>
+          </figure>
+        </li>
+        <li title="people--psychiatry">
+          <figure>
+            <div class="icon-box">
+              <svg class="svg-people--psychiatry-dims">
+                <use href="sprite.svg#people--psychiatry"></use>
+              </svg>
+            </div>
+            <figcaption title="people--psychiatry, 523 Bytes">
+              <span class="name">people--psychiatry</span>
+              <span class="meta">
+                <span class="file-size">523 Bytes</span>
+                <button type="button" class="copy" data-copy="people--psychiatry" data-copy-label="Copy ID">Copy ID</button>
+              </span>
+            </figcaption>
+          </figure>
+        </li>
+        <li title="people--psychology">
+          <figure>
+            <div class="icon-box">
+              <svg class="svg-people--psychology-dims">
+                <use href="sprite.svg#people--psychology"></use>
+              </svg>
+            </div>
+            <figcaption title="people--psychology, 715 Bytes">
+              <span class="name">people--psychology</span>
+              <span class="meta">
+                <span class="file-size">715 Bytes</span>
+                <button type="button" class="copy" data-copy="people--psychology" data-copy-label="Copy ID">Copy ID</button>
+              </span>
+            </figcaption>
+          </figure>
+        </li>
+        <li title="people--sentiment_satisfied">
+          <figure>
+            <div class="icon-box">
+              <svg class="svg-people--sentiment_satisfied-dims">
+                <use href="sprite.svg#people--sentiment_satisfied"></use>
+              </svg>
+            </div>
+            <figcaption title="people--sentiment_satisfied, 753 Bytes">
+              <span class="name">people--sentiment_satisfied</span>
+              <span class="meta">
+                <span class="file-size">753 Bytes</span>
+                <button type="button" class="copy" data-copy="people--sentiment_satisfied" data-copy-label="Copy ID">Copy ID</button>
+              </span>
+            </figcaption>
+          </figure>
+        </li>
+        <li title="status--clock_loader_40">
+          <figure>
+            <div class="icon-box">
+              <svg class="svg-status--clock_loader_40-dims">
+                <use href="sprite.svg#status--clock_loader_40"></use>
+              </svg>
+            </div>
+            <figcaption title="status--clock_loader_40, 404 Bytes">
+              <span class="name">status--clock_loader_40</span>
+              <span class="meta">
+                <span class="file-size">404 Bytes</span>
+                <button type="button" class="copy" data-copy="status--clock_loader_40" data-copy-label="Copy ID">Copy ID</button>
+              </span>
+            </figcaption>
+          </figure>
+        </li>
+        <li title="status--deployed_code_update">
+          <figure>
+            <div class="icon-box">
+              <svg class="svg-status--deployed_code_update-dims">
+                <use href="sprite.svg#status--deployed_code_update"></use>
+              </svg>
+            </div>
+            <figcaption title="status--deployed_code_update, 519 Bytes">
+              <span class="name">status--deployed_code_update</span>
+              <span class="meta">
+                <span class="file-size">519 Bytes</span>
+                <button type="button" class="copy" data-copy="status--deployed_code_update" data-copy-label="Copy ID">Copy ID</button>
+              </span>
+            </figcaption>
+          </figure>
+        </li>
+        <li title="status--info">
+          <figure>
+            <div class="icon-box">
+              <svg class="svg-status--info-dims">
+                <use href="sprite.svg#status--info"></use>
+              </svg>
+            </div>
+            <figcaption title="status--info, 538 Bytes">
+              <span class="name">status--info</span>
+              <span class="meta">
+                <span class="file-size">538 Bytes</span>
+                <button type="button" class="copy" data-copy="status--info" data-copy-label="Copy ID">Copy ID</button>
+              </span>
+            </figcaption>
+          </figure>
+        </li>
+        <li title="status--planner_review">
+          <figure>
+            <div class="icon-box">
+              <svg class="svg-status--planner_review-dims">
+                <use href="sprite.svg#status--planner_review"></use>
+              </svg>
+            </div>
+            <figcaption title="status--planner_review, 211 Bytes">
+              <span class="name">status--planner_review</span>
+              <span class="meta">
+                <span class="file-size">211 Bytes</span>
+                <button type="button" class="copy" data-copy="status--planner_review" data-copy-label="Copy ID">Copy ID</button>
+              </span>
+            </figcaption>
+          </figure>
+        </li>
+        <li title="status--schedule">
+          <figure>
+            <div class="icon-box">
+              <svg class="svg-status--schedule-dims">
+                <use href="sprite.svg#status--schedule"></use>
+              </svg>
+            </div>
+            <figcaption title="status--schedule, 458 Bytes">
+              <span class="name">status--schedule</span>
+              <span class="meta">
+                <span class="file-size">458 Bytes</span>
+                <button type="button" class="copy" data-copy="status--schedule" data-copy-label="Copy ID">Copy ID</button>
+              </span>
+            </figcaption>
+          </figure>
+        </li>
+      </ul>
+    </section>
+    <section>
+
+<!--
+C) Inline SVG, sized by viewBox only (stacksvg-style)
+====================================================================================================
+This method needs no CSS at all: the SVG is sized by a single `width` (or `height`) attribute and the
+missing other dimension is derived from the shape's viewBox — the same technique the
+[stacksvg](https://github.com/stacksvg/stacksvg) project relies on.
+-->
+
+      <h3>C) Inline SVG, sized by viewBox only (stacksvg-style)</h3>
+      <ul class="grid">
+        <li title="actions--add_circle">
+          <figure>
+            <div class="icon-box">
+              <svg viewBox="0 0 24 24" width="1.5em">
+                <use href="sprite.svg#actions--add_circle"></use>
+              </svg>
+            </div>
+            <figcaption title="actions--add_circle, 452 Bytes">
+              <span class="name">actions--add_circle</span>
+              <span class="meta">
+                <span class="file-size">452 Bytes</span>
+                <button type="button" class="copy" data-copy="actions--add_circle" data-copy-label="Copy ID">Copy ID</button>
+              </span>
+            </figcaption>
+          </figure>
+        </li>
+        <li title="actions--check">
+          <figure>
+            <div class="icon-box">
+              <svg viewBox="0 0 24 24" width="1.5em">
+                <use href="sprite.svg#actions--check"></use>
+              </svg>
+            </div>
+            <figcaption title="actions--check, 163 Bytes">
+              <span class="name">actions--check</span>
+              <span class="meta">
+                <span class="file-size">163 Bytes</span>
+                <button type="button" class="copy" data-copy="actions--check" data-copy-label="Copy ID">Copy ID</button>
+              </span>
+            </figcaption>
+          </figure>
+        </li>
+        <li title="actions--check_circle">
+          <figure>
+            <div class="icon-box">
+              <svg viewBox="0 0 24 24" width="1.5em">
+                <use href="sprite.svg#actions--check_circle"></use>
+              </svg>
+            </div>
+            <figcaption title="actions--check_circle, 448 Bytes">
+              <span class="name">actions--check_circle</span>
+              <span class="meta">
+                <span class="file-size">448 Bytes</span>
+                <button type="button" class="copy" data-copy="actions--check_circle" data-copy-label="Copy ID">Copy ID</button>
+              </span>
+            </figcaption>
+          </figure>
+        </li>
+        <li title="actions--delete">
+          <figure>
+            <div class="icon-box">
+              <svg viewBox="0 0 24 24" width="1.5em">
+                <use href="sprite.svg#actions--delete"></use>
+              </svg>
+            </div>
+            <figcaption title="actions--delete, 304 Bytes">
+              <span class="name">actions--delete</span>
+              <span class="meta">
+                <span class="file-size">304 Bytes</span>
+                <button type="button" class="copy" data-copy="actions--delete" data-copy-label="Copy ID">Copy ID</button>
+              </span>
+            </figcaption>
+          </figure>
+        </li>
+        <li title="actions--download">
+          <figure>
+            <div class="icon-box">
+              <svg viewBox="0 0 24 24" width="1.5em">
+                <use href="sprite.svg#actions--download"></use>
+              </svg>
+            </div>
+            <figcaption title="actions--download, 263 Bytes">
+              <span class="name">actions--download</span>
+              <span class="meta">
+                <span class="file-size">263 Bytes</span>
+                <button type="button" class="copy" data-copy="actions--download" data-copy-label="Copy ID">Copy ID</button>
+              </span>
+            </figcaption>
+          </figure>
+        </li>
+        <li title="actions--edit">
+          <figure>
+            <div class="icon-box">
+              <svg viewBox="0 0 24 24" width="1.5em">
+                <use href="sprite.svg#actions--edit"></use>
+              </svg>
+            </div>
+            <figcaption title="actions--edit, 314 Bytes">
+              <span class="name">actions--edit</span>
+              <span class="meta">
+                <span class="file-size">314 Bytes</span>
+                <button type="button" class="copy" data-copy="actions--edit" data-copy-label="Copy ID">Copy ID</button>
+              </span>
+            </figcaption>
+          </figure>
+        </li>
+        <li title="actions--select_check_box">
+          <figure>
+            <div class="icon-box">
+              <svg viewBox="0 0 24 24" width="1.5em">
+                <use href="sprite.svg#actions--select_check_box"></use>
+              </svg>
+            </div>
+            <figcaption title="actions--select_check_box, 307 Bytes">
+              <span class="name">actions--select_check_box</span>
+              <span class="meta">
+                <span class="file-size">307 Bytes</span>
+                <button type="button" class="copy" data-copy="actions--select_check_box" data-copy-label="Copy ID">Copy ID</button>
+              </span>
+            </figcaption>
+          </figure>
+        </li>
+        <li title="actions--settings">
+          <figure>
+            <div class="icon-box">
+              <svg viewBox="0 0 24 24" width="1.5em">
+                <use href="sprite.svg#actions--settings"></use>
+              </svg>
+            </div>
+            <figcaption title="actions--settings, 756 Bytes">
+              <span class="name">actions--settings</span>
+              <span class="meta">
+                <span class="file-size">756 Bytes</span>
+                <button type="button" class="copy" data-copy="actions--settings" data-copy-label="Copy ID">Copy ID</button>
+              </span>
+            </figcaption>
+          </figure>
+        </li>
+        <li title="actions--thumb_up">
+          <figure>
+            <div class="icon-box">
+              <svg viewBox="0 0 24 24" width="1.5em">
+                <use href="sprite.svg#actions--thumb_up"></use>
+              </svg>
+            </div>
+            <figcaption title="actions--thumb_up, 339 Bytes">
+              <span class="name">actions--thumb_up</span>
+              <span class="meta">
+                <span class="file-size">339 Bytes</span>
+                <button type="button" class="copy" data-copy="actions--thumb_up" data-copy-label="Copy ID">Copy ID</button>
+              </span>
+            </figcaption>
+          </figure>
+        </li>
+        <li title="actions--update">
+          <figure>
+            <div class="icon-box">
+              <svg viewBox="0 0 24 24" width="1.5em">
+                <use href="sprite.svg#actions--update"></use>
+              </svg>
+            </div>
+            <figcaption title="actions--update, 433 Bytes">
+              <span class="name">actions--update</span>
+              <span class="meta">
+                <span class="file-size">433 Bytes</span>
+                <button type="button" class="copy" data-copy="actions--update" data-copy-label="Copy ID">Copy ID</button>
+              </span>
+            </figcaption>
+          </figure>
+        </li>
+        <li title="communication--alternate_email">
+          <figure>
+            <div class="icon-box">
+              <svg viewBox="0 0 24 24" width="1.5em">
+                <use href="sprite.svg#communication--alternate_email"></use>
+              </svg>
+            </div>
+            <figcaption title="communication--alternate_email, 597 Bytes">
+              <span class="name">communication--alternate_email</span>
+              <span class="meta">
+                <span class="file-size">597 Bytes</span>
+                <button type="button" class="copy" data-copy="communication--alternate_email" data-copy-label="Copy ID">Copy ID</button>
+              </span>
+            </figcaption>
+          </figure>
+        </li>
+        <li title="communication--globe_uk">
+          <figure>
+            <div class="icon-box">
+              <svg viewBox="0 0 24 24" width="1.5em">
+                <use href="sprite.svg#communication--globe_uk"></use>
+              </svg>
+            </div>
+            <figcaption title="communication--globe_uk, 723 Bytes">
+              <span class="name">communication--globe_uk</span>
+              <span class="meta">
+                <span class="file-size">723 Bytes</span>
+                <button type="button" class="copy" data-copy="communication--globe_uk" data-copy-label="Copy ID">Copy ID</button>
+              </span>
+            </figcaption>
+          </figure>
+        </li>
+        <li title="communication--link_2">
+          <figure>
+            <div class="icon-box">
+              <svg viewBox="0 0 24 24" width="1.5em">
+                <use href="sprite.svg#communication--link_2"></use>
+              </svg>
+            </div>
+            <figcaption title="communication--link_2, 497 Bytes">
+              <span class="name">communication--link_2</span>
+              <span class="meta">
+                <span class="file-size">497 Bytes</span>
+                <button type="button" class="copy" data-copy="communication--link_2" data-copy-label="Copy ID">Copy ID</button>
+              </span>
+            </figcaption>
+          </figure>
+        </li>
+        <li title="communication--mail">
+          <figure>
+            <div class="icon-box">
+              <svg viewBox="0 0 24 24" width="1.5em">
+                <use href="sprite.svg#communication--mail"></use>
+              </svg>
+            </div>
+            <figcaption title="communication--mail, 313 Bytes">
+              <span class="name">communication--mail</span>
+              <span class="meta">
+                <span class="file-size">313 Bytes</span>
+                <button type="button" class="copy" data-copy="communication--mail" data-copy-label="Copy ID">Copy ID</button>
+              </span>
+            </figcaption>
+          </figure>
+        </li>
+        <li title="content--article">
+          <figure>
+            <div class="icon-box">
+              <svg viewBox="0 0 24 24" width="1.5em">
+                <use href="sprite.svg#content--article"></use>
+              </svg>
+            </div>
+            <figcaption title="content--article, 335 Bytes">
+              <span class="name">content--article</span>
+              <span class="meta">
+                <span class="file-size">335 Bytes</span>
+                <button type="button" class="copy" data-copy="content--article" data-copy-label="Copy ID">Copy ID</button>
+              </span>
+            </figcaption>
+          </figure>
+        </li>
+        <li title="content--bolt">
+          <figure>
+            <div class="icon-box">
+              <svg viewBox="0 0 24 24" width="1.5em">
+                <use href="sprite.svg#content--bolt"></use>
+              </svg>
+            </div>
+            <figcaption title="content--bolt, 220 Bytes">
+              <span class="name">content--bolt</span>
+              <span class="meta">
+                <span class="file-size">220 Bytes</span>
+                <button type="button" class="copy" data-copy="content--bolt" data-copy-label="Copy ID">Copy ID</button>
+              </span>
+            </figcaption>
+          </figure>
+        </li>
+        <li title="content--cycle">
+          <figure>
+            <div class="icon-box">
+              <svg viewBox="0 0 24 24" width="1.5em">
+                <use href="sprite.svg#content--cycle"></use>
+              </svg>
+            </div>
+            <figcaption title="content--cycle, 521 Bytes">
+              <span class="name">content--cycle</span>
+              <span class="meta">
+                <span class="file-size">521 Bytes</span>
+                <button type="button" class="copy" data-copy="content--cycle" data-copy-label="Copy ID">Copy ID</button>
+              </span>
+            </figcaption>
+          </figure>
+        </li>
+        <li title="content--diamond_shine">
+          <figure>
+            <div class="icon-box">
+              <svg viewBox="0 0 24 24" width="1.5em">
+                <use href="sprite.svg#content--diamond_shine"></use>
+              </svg>
+            </div>
+            <figcaption title="content--diamond_shine, 305 Bytes">
+              <span class="name">content--diamond_shine</span>
+              <span class="meta">
+                <span class="file-size">305 Bytes</span>
+                <button type="button" class="copy" data-copy="content--diamond_shine" data-copy-label="Copy ID">Copy ID</button>
+              </span>
+            </figcaption>
+          </figure>
+        </li>
+        <li title="content--filter_drama">
+          <figure>
+            <div class="icon-box">
+              <svg viewBox="0 0 24 24" width="1.5em">
+                <use href="sprite.svg#content--filter_drama"></use>
+              </svg>
+            </div>
+            <figcaption title="content--filter_drama, 437 Bytes">
+              <span class="name">content--filter_drama</span>
+              <span class="meta">
+                <span class="file-size">437 Bytes</span>
+                <button type="button" class="copy" data-copy="content--filter_drama" data-copy-label="Copy ID">Copy ID</button>
+              </span>
+            </figcaption>
+          </figure>
+        </li>
+        <li title="content--radio_button_checked">
+          <figure>
+            <div class="icon-box">
+              <svg viewBox="0 0 24 24" width="1.5em">
+                <use href="sprite.svg#content--radio_button_checked"></use>
+              </svg>
+            </div>
+            <figcaption title="content--radio_button_checked, 511 Bytes">
+              <span class="name">content--radio_button_checked</span>
+              <span class="meta">
+                <span class="file-size">511 Bytes</span>
+                <button type="button" class="copy" data-copy="content--radio_button_checked" data-copy-label="Copy ID">Copy ID</button>
+              </span>
+            </figcaption>
+          </figure>
+        </li>
+        <li title="navigation--arrow_forward">
+          <figure>
+            <div class="icon-box">
+              <svg viewBox="0 0 24 24" width="1.5em">
+                <use href="sprite.svg#navigation--arrow_forward"></use>
+              </svg>
+            </div>
+            <figcaption title="navigation--arrow_forward, 175 Bytes">
+              <span class="name">navigation--arrow_forward</span>
+              <span class="meta">
+                <span class="file-size">175 Bytes</span>
+                <button type="button" class="copy" data-copy="navigation--arrow_forward" data-copy-label="Copy ID">Copy ID</button>
+              </span>
+            </figcaption>
+          </figure>
+        </li>
+        <li title="navigation--home">
+          <figure>
+            <div class="icon-box">
+              <svg viewBox="0 0 24 24" width="1.5em">
+                <use href="sprite.svg#navigation--home"></use>
+              </svg>
+            </div>
+            <figcaption title="navigation--home, 228 Bytes">
+              <span class="name">navigation--home</span>
+              <span class="meta">
+                <span class="file-size">228 Bytes</span>
+                <button type="button" class="copy" data-copy="navigation--home" data-copy-label="Copy ID">Copy ID</button>
+              </span>
+            </figcaption>
+          </figure>
+        </li>
+        <li title="navigation--search">
+          <figure>
+            <div class="icon-box">
+              <svg viewBox="0 0 24 24" width="1.5em">
+                <use href="sprite.svg#navigation--search"></use>
+              </svg>
+            </div>
+            <figcaption title="navigation--search, 361 Bytes">
+              <span class="name">navigation--search</span>
+              <span class="meta">
+                <span class="file-size">361 Bytes</span>
+                <button type="button" class="copy" data-copy="navigation--search" data-copy-label="Copy ID">Copy ID</button>
+              </span>
+            </figcaption>
+          </figure>
+        </li>
+        <li title="people--back_hand">
+          <figure>
+            <div class="icon-box">
+              <svg viewBox="0 0 24 24" width="1.5em">
+                <use href="sprite.svg#people--back_hand"></use>
+              </svg>
+            </div>
+            <figcaption title="people--back_hand, 522 Bytes">
+              <span class="name">people--back_hand</span>
+              <span class="meta">
+                <span class="file-size">522 Bytes</span>
+                <button type="button" class="copy" data-copy="people--back_hand" data-copy-label="Copy ID">Copy ID</button>
+              </span>
+            </figcaption>
+          </figure>
+        </li>
+        <li title="people--face">
+          <figure>
+            <div class="icon-box">
+              <svg viewBox="0 0 24 24" width="1.5em">
+                <use href="sprite.svg#people--face"></use>
+              </svg>
+            </div>
+            <figcaption title="people--face, 833 Bytes">
+              <span class="name">people--face</span>
+              <span class="meta">
+                <span class="file-size">833 Bytes</span>
+                <button type="button" class="copy" data-copy="people--face" data-copy-label="Copy ID">Copy ID</button>
+              </span>
+            </figcaption>
+          </figure>
+        </li>
+        <li title="people--person">
+          <figure>
+            <div class="icon-box">
+              <svg viewBox="0 0 24 24" width="1.5em">
+                <use href="sprite.svg#people--person"></use>
+              </svg>
+            </div>
+            <figcaption title="people--person, 558 Bytes">
+              <span class="name">people--person</span>
+              <span class="meta">
+                <span class="file-size">558 Bytes</span>
+                <button type="button" class="copy" data-copy="people--person" data-copy-label="Copy ID">Copy ID</button>
+              </span>
+            </figcaption>
+          </figure>
+        </li>
+        <li title="people--psychiatry">
+          <figure>
+            <div class="icon-box">
+              <svg viewBox="0 0 24 24" width="1.5em">
+                <use href="sprite.svg#people--psychiatry"></use>
+              </svg>
+            </div>
+            <figcaption title="people--psychiatry, 523 Bytes">
+              <span class="name">people--psychiatry</span>
+              <span class="meta">
+                <span class="file-size">523 Bytes</span>
+                <button type="button" class="copy" data-copy="people--psychiatry" data-copy-label="Copy ID">Copy ID</button>
+              </span>
+            </figcaption>
+          </figure>
+        </li>
+        <li title="people--psychology">
+          <figure>
+            <div class="icon-box">
+              <svg viewBox="0 0 24 24" width="1.5em">
+                <use href="sprite.svg#people--psychology"></use>
+              </svg>
+            </div>
+            <figcaption title="people--psychology, 715 Bytes">
+              <span class="name">people--psychology</span>
+              <span class="meta">
+                <span class="file-size">715 Bytes</span>
+                <button type="button" class="copy" data-copy="people--psychology" data-copy-label="Copy ID">Copy ID</button>
+              </span>
+            </figcaption>
+          </figure>
+        </li>
+        <li title="people--sentiment_satisfied">
+          <figure>
+            <div class="icon-box">
+              <svg viewBox="0 0 24 24" width="1.5em">
+                <use href="sprite.svg#people--sentiment_satisfied"></use>
+              </svg>
+            </div>
+            <figcaption title="people--sentiment_satisfied, 753 Bytes">
+              <span class="name">people--sentiment_satisfied</span>
+              <span class="meta">
+                <span class="file-size">753 Bytes</span>
+                <button type="button" class="copy" data-copy="people--sentiment_satisfied" data-copy-label="Copy ID">Copy ID</button>
+              </span>
+            </figcaption>
+          </figure>
+        </li>
+        <li title="status--clock_loader_40">
+          <figure>
+            <div class="icon-box">
+              <svg viewBox="0 0 24 24" width="1.5em">
+                <use href="sprite.svg#status--clock_loader_40"></use>
+              </svg>
+            </div>
+            <figcaption title="status--clock_loader_40, 404 Bytes">
+              <span class="name">status--clock_loader_40</span>
+              <span class="meta">
+                <span class="file-size">404 Bytes</span>
+                <button type="button" class="copy" data-copy="status--clock_loader_40" data-copy-label="Copy ID">Copy ID</button>
+              </span>
+            </figcaption>
+          </figure>
+        </li>
+        <li title="status--deployed_code_update">
+          <figure>
+            <div class="icon-box">
+              <svg viewBox="0 0 24 24" width="1.5em">
+                <use href="sprite.svg#status--deployed_code_update"></use>
+              </svg>
+            </div>
+            <figcaption title="status--deployed_code_update, 519 Bytes">
+              <span class="name">status--deployed_code_update</span>
+              <span class="meta">
+                <span class="file-size">519 Bytes</span>
+                <button type="button" class="copy" data-copy="status--deployed_code_update" data-copy-label="Copy ID">Copy ID</button>
+              </span>
+            </figcaption>
+          </figure>
+        </li>
+        <li title="status--info">
+          <figure>
+            <div class="icon-box">
+              <svg viewBox="0 0 24 24" width="1.5em">
+                <use href="sprite.svg#status--info"></use>
+              </svg>
+            </div>
+            <figcaption title="status--info, 538 Bytes">
+              <span class="name">status--info</span>
+              <span class="meta">
+                <span class="file-size">538 Bytes</span>
+                <button type="button" class="copy" data-copy="status--info" data-copy-label="Copy ID">Copy ID</button>
+              </span>
+            </figcaption>
+          </figure>
+        </li>
+        <li title="status--planner_review">
+          <figure>
+            <div class="icon-box">
+              <svg viewBox="0 0 24 24" width="1.5em">
+                <use href="sprite.svg#status--planner_review"></use>
+              </svg>
+            </div>
+            <figcaption title="status--planner_review, 211 Bytes">
+              <span class="name">status--planner_review</span>
+              <span class="meta">
+                <span class="file-size">211 Bytes</span>
+                <button type="button" class="copy" data-copy="status--planner_review" data-copy-label="Copy ID">Copy ID</button>
+              </span>
+            </figcaption>
+          </figure>
+        </li>
+        <li title="status--schedule">
+          <figure>
+            <div class="icon-box">
+              <svg viewBox="0 0 24 24" width="1.5em">
+                <use href="sprite.svg#status--schedule"></use>
+              </svg>
+            </div>
+            <figcaption title="status--schedule, 458 Bytes">
+              <span class="name">status--schedule</span>
+              <span class="meta">
+                <span class="file-size">458 Bytes</span>
+                <button type="button" class="copy" data-copy="status--schedule" data-copy-label="Copy ID">Copy ID</button>
+              </span>
+            </figcaption>
+          </figure>
+        </li>
+      </ul>
+
+    </section>
+    <footer>
+      <p>Generated at Sun, 13 Sep 2026 12:11:52 GMT by <a href="https://github.com/svgforge/svgforge" target="_blank" rel="noopener noreferrer">svgforge</a>.</p>
+    </footer>
+<!--
+Common preview behavior (shared via tmpl/common/preview.js)
+====================================================================================================
+-->
+
+<script>
+(function () {
+  function onCopied(button) {
+    button.classList.add('copied');
+    button.textContent = 'Copied';
+    setTimeout(() => {
+      button.classList.remove('copied');
+      button.textContent = button.dataset.copyLabel;
+    }, 1500);
+  }
+
+  document.addEventListener('click', (event) => {
+    const button = event.target.closest('[data-copy]');
+    if (button) {
+      navigator.clipboard.writeText(button.dataset.copy.trim()).then(() => onCopied(button));
+    }
+  });
+}());
+</script>
+  </body>
+</html>

@@ -55,7 +55,7 @@
     </linearGradient>
     <linearGradient
        inkscape:collect="always"
-       xlink:href="#aigrd1"
+       href="#aigrd1"
        id="linearGradient53551"
        gradientUnits="userSpaceOnUse"
        x1="99.7773"
@@ -72,7 +72,7 @@
        cx="14.287618"
        gradientTransform="matrix(1.399258,-2.234445e-7,8.196178e-8,0.513264,4.365074,4.839285)"
        id="radialGradient2308"
-       xlink:href="#linearGradient2300"
+       href="#linearGradient2300"
        inkscape:collect="always" />
   </defs>
   <sodipodi:namedview

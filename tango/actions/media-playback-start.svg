@@ -87,7 +87,7 @@
     </linearGradient>
     <linearGradient
        inkscape:collect="always"
-       xlink:href="#linearGradient5075"
+       href="#linearGradient5075"
        id="linearGradient2306"
        gradientUnits="userSpaceOnUse"
        x1="71.288956"
@@ -97,7 +97,7 @@
        gradientTransform="translate(-45.00042,-71.09425)" />
     <radialGradient
        inkscape:collect="always"
-       xlink:href="#linearGradient2691"
+       href="#linearGradient2691"
        id="radialGradient2314"
        gradientUnits="userSpaceOnUse"
        gradientTransform="matrix(5.324342e-2,-0.836238,2.019473,0.128568,-151.9195,108.0768)"
@@ -108,7 +108,7 @@
        r="12.551644" />
     <linearGradient
        inkscape:collect="always"
-       xlink:href="#linearGradient2684"
+       href="#linearGradient2684"
        id="linearGradient2690"
        gradientUnits="userSpaceOnUse"
        gradientTransform="matrix(1.128181,0,0,1.128181,-53.99314,-83.36009)"
