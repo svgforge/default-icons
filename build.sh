@@ -3,7 +3,7 @@
 svgforge -C material.json  'material/./**/*.svg'
 svgforge -C tango.json  'tango/./**/*.svg'
 
-./serve.py --dir OUT &
+./serve.py --dir dist &
 SERVER_PID=$!
 
 xdg-open "http://localhost:8000"
