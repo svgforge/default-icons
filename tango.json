@@ -1,0 +1,12 @@
+{
+  "dest": "./OUT/tango",
+  "mode": {
+    "symbol": {
+      "sprite": "sprite.svg",
+      "render": {
+        "css": false
+      },
+      "example": true
+    }
+  }
+}
