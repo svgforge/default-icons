@@ -1,0 +1,28 @@
+{
+  "dest": "./OUT",
+  "shape": {
+    "transform": [
+      {
+        "svgo": {
+          "plugins": [
+            {
+              "name": "removeAttrs",
+              "params": {
+                "attrs": "fill"
+              }
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "mode": {
+    "symbol": {
+      "sprite": "sprite.svg",
+      "render": {
+        "css": false
+      },
+      "example": true
+    }
+  }
+}
