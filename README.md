@@ -2,7 +2,7 @@
 
 A collection of icon sets, sorted into category folders.
 
-These icons serve as a base for tests and the [WordPress Plugin Icon Library](https://github.com/svgforge/icon-library).
+These icons serve as a base for tests and the [WordPress SVG Forge Icon Manager](https://github.com/svgforge/sf-icon-manager).
 
 ## Build
 
