@@ -1,0 +1,2012 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Icon sprite preview | notor</title>
+  <style>
+    :root {
+      --icon-size: 40px;
+      --gutter: 8px;
+    }
+
+    body {
+      margin: 0;
+      padding: 2rem;
+      color: #222;
+      background: #fff;
+      font-family: system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+      font-size: 1rem;
+      line-height: 1.5;
+    }
+
+    h1 {
+      margin-top: 0;
+    }
+
+    .icon {
+      width: var(--icon-size);
+      height: var(--icon-size);
+      fill: currentColor;
+    }
+
+    .icon-list {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(96px, 1fr));
+      gap: 1.25rem;
+      margin: 0 0 1.25rem;
+      padding: 0;
+      list-style: none;
+    }
+
+    .icon-list li {
+      position: relative;
+      margin: 0;
+      padding: var(--gutter);
+      text-align: center;
+      border: 1px solid #ccc;
+      cursor: default;
+    }
+
+    .icon-list .icon-box {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+      aspect-ratio: 1 / 1;
+      border: 1px solid #ddd;
+      background-color: #eee;
+      background-image:
+        linear-gradient(45deg, #ccc 25%, transparent 25%, transparent 75%, #ccc 75%, #ccc),
+        linear-gradient(45deg, #ccc 25%, transparent 25%, transparent 75%, #ccc 75%, #ccc);
+      background-size: calc(var(--gutter) * 1.5) calc(var(--gutter) * 1.5);
+      background-position: 0 0, calc(var(--gutter) * 0.75) calc(var(--gutter) * 0.75);
+    }
+
+    .icon-list li h2 {
+      margin: 0.25rem 0 0;
+      font-size: 0.75rem;
+      font-weight: 400;
+      word-break: break-word;
+    }
+
+    footer {
+      margin-top: 2rem;
+      font-size: 0.75rem;
+      color: #666;
+    }
+  </style>
+</head>
+<body>
+
+
+  <h1>Icon sprite preview</h1>
+  <p>213 icons · external sprite</p>
+
+  <ul class="icon-list">
+
+    <li title="actions--address-book-new">
+      <div class="icon-box">
+        <svg class="icon" aria-hidden="true">
+          <use href="sprite.svg#actions--address-book-new"></use>
+        </svg>
+      </div>
+      <h2>actions--address-book-new</h2>
+    </li>
+
+    <li title="actions--appointment-new">
+      <div class="icon-box">
+        <svg class="icon" aria-hidden="true">
+          <use href="sprite.svg#actions--appointment-new"></use>
+        </svg>
+      </div>
+      <h2>actions--appointment-new</h2>
+    </li>
+
+    <li title="actions--bookmark-new">
+      <div class="icon-box">
+        <svg class="icon" aria-hidden="true">
+          <use href="sprite.svg#actions--bookmark-new"></use>
+        </svg>
+      </div>
+      <h2>actions--bookmark-new</h2>
+    </li>
+
+    <li title="actions--contact-new">
+      <div class="icon-box">
+        <svg class="icon" aria-hidden="true">
+          <use href="sprite.svg#actions--contact-new"></use>
+        </svg>
+      </div>
+      <h2>actions--contact-new</h2>
+    </li>
+
+    <li title="actions--document-new">
+      <div class="icon-box">
+        <svg class="icon" aria-hidden="true">
+          <use href="sprite.svg#actions--document-new"></use>
+        </svg>
+      </div>
+      <h2>actions--document-new</h2>
+    </li>
+
+    <li title="actions--document-open">
+      <div class="icon-box">
+        <svg class="icon" aria-hidden="true">
+          <use href="sprite.svg#actions--document-open"></use>
+        </svg>
+      </div>
+      <h2>actions--document-open</h2>
+    </li>
+
+    <li title="actions--document-print">
+      <div class="icon-box">
+        <svg class="icon" aria-hidden="true">
+          <use href="sprite.svg#actions--document-print"></use>
+        </svg>
+      </div>
+      <h2>actions--document-print</h2>
+    </li>
+
+    <li title="actions--document-print-preview">
+      <div class="icon-box">
+        <svg class="icon" aria-hidden="true">
+          <use href="sprite.svg#actions--document-print-preview"></use>
+        </svg>
+      </div>
+      <h2>actions--document-print-preview</h2>
+    </li>
+
+    <li title="actions--document-properties">
+      <div class="icon-box">
+        <svg class="icon" aria-hidden="true">
+          <use href="sprite.svg#actions--document-properties"></use>
+        </svg>
+      </div>
+      <h2>actions--document-properties</h2>
+    </li>
+
+    <li title="actions--document-save">
+      <div class="icon-box">
+        <svg class="icon" aria-hidden="true">
+          <use href="sprite.svg#actions--document-save"></use>
+        </svg>
+      </div>
+      <h2>actions--document-save</h2>
+    </li>
+
+    <li title="actions--document-save-as">
+      <div class="icon-box">
+        <svg class="icon" aria-hidden="true">
+          <use href="sprite.svg#actions--document-save-as"></use>
+        </svg>
+      </div>
+      <h2>actions--document-save-as</h2>
+    </li>
+
+    <li title="actions--edit-clear">
+      <div class="icon-box">
+        <svg class="icon" aria-hidden="true">
+          <use href="sprite.svg#actions--edit-clear"></use>
+        </svg>
+      </div>
+      <h2>actions--edit-clear</h2>
+    </li>
+
+    <li title="actions--edit-copy">
+      <div class="icon-box">
+        <svg class="icon" aria-hidden="true">
+          <use href="sprite.svg#actions--edit-copy"></use>
+        </svg>
+      </div>
+      <h2>actions--edit-copy</h2>
+    </li>
+
+    <li title="actions--edit-cut">
+      <div class="icon-box">
+        <svg class="icon" aria-hidden="true">
+          <use href="sprite.svg#actions--edit-cut"></use>
+        </svg>
+      </div>
+      <h2>actions--edit-cut</h2>
+    </li>
+
+    <li title="actions--edit-delete">
+      <div class="icon-box">
+        <svg class="icon" aria-hidden="true">
+          <use href="sprite.svg#actions--edit-delete"></use>
+        </svg>
+      </div>
+      <h2>actions--edit-delete</h2>
+    </li>
+
+    <li title="actions--edit-find">
+      <div class="icon-box">
+        <svg class="icon" aria-hidden="true">
+          <use href="sprite.svg#actions--edit-find"></use>
+        </svg>
+      </div>
+      <h2>actions--edit-find</h2>
+    </li>
+
+    <li title="actions--edit-find-replace">
+      <div class="icon-box">
+        <svg class="icon" aria-hidden="true">
+          <use href="sprite.svg#actions--edit-find-replace"></use>
+        </svg>
+      </div>
+      <h2>actions--edit-find-replace</h2>
+    </li>
+
+    <li title="actions--edit-paste">
+      <div class="icon-box">
+        <svg class="icon" aria-hidden="true">
+          <use href="sprite.svg#actions--edit-paste"></use>
+        </svg>
+      </div>
+      <h2>actions--edit-paste</h2>
+    </li>
+
+    <li title="actions--edit-redo">
+      <div class="icon-box">
+        <svg class="icon" aria-hidden="true">
+          <use href="sprite.svg#actions--edit-redo"></use>
+        </svg>
+      </div>
+      <h2>actions--edit-redo</h2>
+    </li>
+
+    <li title="actions--edit-select-all">
+      <div class="icon-box">
+        <svg class="icon" aria-hidden="true">
+          <use href="sprite.svg#actions--edit-select-all"></use>
+        </svg>
+      </div>
+      <h2>actions--edit-select-all</h2>
+    </li>
+
+    <li title="actions--edit-undo">
+      <div class="icon-box">
+        <svg class="icon" aria-hidden="true">
+          <use href="sprite.svg#actions--edit-undo"></use>
+        </svg>
+      </div>
+      <h2>actions--edit-undo</h2>
+    </li>
+
+    <li title="actions--folder-new">
+      <div class="icon-box">
+        <svg class="icon" aria-hidden="true">
+          <use href="sprite.svg#actions--folder-new"></use>
+        </svg>
+      </div>
+      <h2>actions--folder-new</h2>
+    </li>
+
+    <li title="actions--format-indent-less">
+      <div class="icon-box">
+        <svg class="icon" aria-hidden="true">
+          <use href="sprite.svg#actions--format-indent-less"></use>
+        </svg>
+      </div>
+      <h2>actions--format-indent-less</h2>
+    </li>
+
+    <li title="actions--format-indent-more">
+      <div class="icon-box">
+        <svg class="icon" aria-hidden="true">
+          <use href="sprite.svg#actions--format-indent-more"></use>
+        </svg>
+      </div>
+      <h2>actions--format-indent-more</h2>
+    </li>
+
+    <li title="actions--format-justify-center">
+      <div class="icon-box">
+        <svg class="icon" aria-hidden="true">
+          <use href="sprite.svg#actions--format-justify-center"></use>
+        </svg>
+      </div>
+      <h2>actions--format-justify-center</h2>
+    </li>
+
+    <li title="actions--format-justify-fill">
+      <div class="icon-box">
+        <svg class="icon" aria-hidden="true">
+          <use href="sprite.svg#actions--format-justify-fill"></use>
+        </svg>
+      </div>
+      <h2>actions--format-justify-fill</h2>
+    </li>
+
+    <li title="actions--format-justify-left">
+      <div class="icon-box">
+        <svg class="icon" aria-hidden="true">
+          <use href="sprite.svg#actions--format-justify-left"></use>
+        </svg>
+      </div>
+      <h2>actions--format-justify-left</h2>
+    </li>
+
+    <li title="actions--format-justify-right">
+      <div class="icon-box">
+        <svg class="icon" aria-hidden="true">
+          <use href="sprite.svg#actions--format-justify-right"></use>
+        </svg>
+      </div>
+      <h2>actions--format-justify-right</h2>
+    </li>
+
+    <li title="actions--format-text-bold">
+      <div class="icon-box">
+        <svg class="icon" aria-hidden="true">
+          <use href="sprite.svg#actions--format-text-bold"></use>
+        </svg>
+      </div>
+      <h2>actions--format-text-bold</h2>
+    </li>
+
+    <li title="actions--format-text-italic">
+      <div class="icon-box">
+        <svg class="icon" aria-hidden="true">
+          <use href="sprite.svg#actions--format-text-italic"></use>
+        </svg>
+      </div>
+      <h2>actions--format-text-italic</h2>
+    </li>
+
+    <li title="actions--format-text-strikethrough">
+      <div class="icon-box">
+        <svg class="icon" aria-hidden="true">
+          <use href="sprite.svg#actions--format-text-strikethrough"></use>
+        </svg>
+      </div>
+      <h2>actions--format-text-strikethrough</h2>
+    </li>
+
+    <li title="actions--format-text-underline">
+      <div class="icon-box">
+        <svg class="icon" aria-hidden="true">
+          <use href="sprite.svg#actions--format-text-underline"></use>
+        </svg>
+      </div>
+      <h2>actions--format-text-underline</h2>
+    </li>
+
+    <li title="actions--go-bottom">
+      <div class="icon-box">
+        <svg class="icon" aria-hidden="true">
+          <use href="sprite.svg#actions--go-bottom"></use>
+        </svg>
+      </div>
+      <h2>actions--go-bottom</h2>
+    </li>
+
+    <li title="actions--go-down">
+      <div class="icon-box">
+        <svg class="icon" aria-hidden="true">
+          <use href="sprite.svg#actions--go-down"></use>
+        </svg>
+      </div>
+      <h2>actions--go-down</h2>
+    </li>
+
+    <li title="actions--go-first">
+      <div class="icon-box">
+        <svg class="icon" aria-hidden="true">
+          <use href="sprite.svg#actions--go-first"></use>
+        </svg>
+      </div>
+      <h2>actions--go-first</h2>
+    </li>
+
+    <li title="actions--go-home">
+      <div class="icon-box">
+        <svg class="icon" aria-hidden="true">
+          <use href="sprite.svg#actions--go-home"></use>
+        </svg>
+      </div>
+      <h2>actions--go-home</h2>
+    </li>
+
+    <li title="actions--go-jump">
+      <div class="icon-box">
+        <svg class="icon" aria-hidden="true">
+          <use href="sprite.svg#actions--go-jump"></use>
+        </svg>
+      </div>
+      <h2>actions--go-jump</h2>
+    </li>
+
+    <li title="actions--go-last">
+      <div class="icon-box">
+        <svg class="icon" aria-hidden="true">
+          <use href="sprite.svg#actions--go-last"></use>
+        </svg>
+      </div>
+      <h2>actions--go-last</h2>
+    </li>
+
+    <li title="actions--go-next">
+      <div class="icon-box">
+        <svg class="icon" aria-hidden="true">
+          <use href="sprite.svg#actions--go-next"></use>
+        </svg>
+      </div>
+      <h2>actions--go-next</h2>
+    </li>
+
+    <li title="actions--go-previous">
+      <div class="icon-box">
+        <svg class="icon" aria-hidden="true">
+          <use href="sprite.svg#actions--go-previous"></use>
+        </svg>
+      </div>
+      <h2>actions--go-previous</h2>
+    </li>
+
+    <li title="actions--go-top">
+      <div class="icon-box">
+        <svg class="icon" aria-hidden="true">
+          <use href="sprite.svg#actions--go-top"></use>
+        </svg>
+      </div>
+      <h2>actions--go-top</h2>
+    </li>
+
+    <li title="actions--go-up">
+      <div class="icon-box">
+        <svg class="icon" aria-hidden="true">
+          <use href="sprite.svg#actions--go-up"></use>
+        </svg>
+      </div>
+      <h2>actions--go-up</h2>
+    </li>
+
+    <li title="actions--list-add">
+      <div class="icon-box">
+        <svg class="icon" aria-hidden="true">
+          <use href="sprite.svg#actions--list-add"></use>
+        </svg>
+      </div>
+      <h2>actions--list-add</h2>
+    </li>
+
+    <li title="actions--list-remove">
+      <div class="icon-box">
+        <svg class="icon" aria-hidden="true">
+          <use href="sprite.svg#actions--list-remove"></use>
+        </svg>
+      </div>
+      <h2>actions--list-remove</h2>
+    </li>
+
+    <li title="actions--mail-forward">
+      <div class="icon-box">
+        <svg class="icon" aria-hidden="true">
+          <use href="sprite.svg#actions--mail-forward"></use>
+        </svg>
+      </div>
+      <h2>actions--mail-forward</h2>
+    </li>
+
+    <li title="actions--mail-mark-junk">
+      <div class="icon-box">
+        <svg class="icon" aria-hidden="true">
+          <use href="sprite.svg#actions--mail-mark-junk"></use>
+        </svg>
+      </div>
+      <h2>actions--mail-mark-junk</h2>
+    </li>
+
+    <li title="actions--mail-message-new">
+      <div class="icon-box">
+        <svg class="icon" aria-hidden="true">
+          <use href="sprite.svg#actions--mail-message-new"></use>
+        </svg>
+      </div>
+      <h2>actions--mail-message-new</h2>
+    </li>
+
+    <li title="actions--mail-reply-all">
+      <div class="icon-box">
+        <svg class="icon" aria-hidden="true">
+          <use href="sprite.svg#actions--mail-reply-all"></use>
+        </svg>
+      </div>
+      <h2>actions--mail-reply-all</h2>
+    </li>
+
+    <li title="actions--mail-reply-sender">
+      <div class="icon-box">
+        <svg class="icon" aria-hidden="true">
+          <use href="sprite.svg#actions--mail-reply-sender"></use>
+        </svg>
+      </div>
+      <h2>actions--mail-reply-sender</h2>
+    </li>
+
+    <li title="actions--mail-send-receive">
+      <div class="icon-box">
+        <svg class="icon" aria-hidden="true">
+          <use href="sprite.svg#actions--mail-send-receive"></use>
+        </svg>
+      </div>
+      <h2>actions--mail-send-receive</h2>
+    </li>
+
+    <li title="actions--media-eject">
+      <div class="icon-box">
+        <svg class="icon" aria-hidden="true">
+          <use href="sprite.svg#actions--media-eject"></use>
+        </svg>
+      </div>
+      <h2>actions--media-eject</h2>
+    </li>
+
+    <li title="actions--media-playback-pause">
+      <div class="icon-box">
+        <svg class="icon" aria-hidden="true">
+          <use href="sprite.svg#actions--media-playback-pause"></use>
+        </svg>
+      </div>
+      <h2>actions--media-playback-pause</h2>
+    </li>
+
+    <li title="actions--media-playback-start">
+      <div class="icon-box">
+        <svg class="icon" aria-hidden="true">
+          <use href="sprite.svg#actions--media-playback-start"></use>
+        </svg>
+      </div>
+      <h2>actions--media-playback-start</h2>
+    </li>
+
+    <li title="actions--media-playback-stop">
+      <div class="icon-box">
+        <svg class="icon" aria-hidden="true">
+          <use href="sprite.svg#actions--media-playback-stop"></use>
+        </svg>
+      </div>
+      <h2>actions--media-playback-stop</h2>
+    </li>
+
+    <li title="actions--media-record">
+      <div class="icon-box">
+        <svg class="icon" aria-hidden="true">
+          <use href="sprite.svg#actions--media-record"></use>
+        </svg>
+      </div>
+      <h2>actions--media-record</h2>
+    </li>
+
+    <li title="actions--media-seek-backward">
+      <div class="icon-box">
+        <svg class="icon" aria-hidden="true">
+          <use href="sprite.svg#actions--media-seek-backward"></use>
+        </svg>
+      </div>
+      <h2>actions--media-seek-backward</h2>
+    </li>
+
+    <li title="actions--media-seek-forward">
+      <div class="icon-box">
+        <svg class="icon" aria-hidden="true">
+          <use href="sprite.svg#actions--media-seek-forward"></use>
+        </svg>
+      </div>
+      <h2>actions--media-seek-forward</h2>
+    </li>
+
+    <li title="actions--media-skip-backward">
+      <div class="icon-box">
+        <svg class="icon" aria-hidden="true">
+          <use href="sprite.svg#actions--media-skip-backward"></use>
+        </svg>
+      </div>
+      <h2>actions--media-skip-backward</h2>
+    </li>
+
+    <li title="actions--media-skip-forward">
+      <div class="icon-box">
+        <svg class="icon" aria-hidden="true">
+          <use href="sprite.svg#actions--media-skip-forward"></use>
+        </svg>
+      </div>
+      <h2>actions--media-skip-forward</h2>
+    </li>
+
+    <li title="actions--process-stop">
+      <div class="icon-box">
+        <svg class="icon" aria-hidden="true">
+          <use href="sprite.svg#actions--process-stop"></use>
+        </svg>
+      </div>
+      <h2>actions--process-stop</h2>
+    </li>
+
+    <li title="actions--system-lock-screen">
+      <div class="icon-box">
+        <svg class="icon" aria-hidden="true">
+          <use href="sprite.svg#actions--system-lock-screen"></use>
+        </svg>
+      </div>
+      <h2>actions--system-lock-screen</h2>
+    </li>
+
+    <li title="actions--system-log-out">
+      <div class="icon-box">
+        <svg class="icon" aria-hidden="true">
+          <use href="sprite.svg#actions--system-log-out"></use>
+        </svg>
+      </div>
+      <h2>actions--system-log-out</h2>
+    </li>
+
+    <li title="actions--system-search">
+      <div class="icon-box">
+        <svg class="icon" aria-hidden="true">
+          <use href="sprite.svg#actions--system-search"></use>
+        </svg>
+      </div>
+      <h2>actions--system-search</h2>
+    </li>
+
+    <li title="actions--system-shutdown">
+      <div class="icon-box">
+        <svg class="icon" aria-hidden="true">
+          <use href="sprite.svg#actions--system-shutdown"></use>
+        </svg>
+      </div>
+      <h2>actions--system-shutdown</h2>
+    </li>
+
+    <li title="actions--tab-new">
+      <div class="icon-box">
+        <svg class="icon" aria-hidden="true">
+          <use href="sprite.svg#actions--tab-new"></use>
+        </svg>
+      </div>
+      <h2>actions--tab-new</h2>
+    </li>
+
+    <li title="actions--view-fullscreen">
+      <div class="icon-box">
+        <svg class="icon" aria-hidden="true">
+          <use href="sprite.svg#actions--view-fullscreen"></use>
+        </svg>
+      </div>
+      <h2>actions--view-fullscreen</h2>
+    </li>
+
+    <li title="actions--view-refresh">
+      <div class="icon-box">
+        <svg class="icon" aria-hidden="true">
+          <use href="sprite.svg#actions--view-refresh"></use>
+        </svg>
+      </div>
+      <h2>actions--view-refresh</h2>
+    </li>
+
+    <li title="actions--window-new">
+      <div class="icon-box">
+        <svg class="icon" aria-hidden="true">
+          <use href="sprite.svg#actions--window-new"></use>
+        </svg>
+      </div>
+      <h2>actions--window-new</h2>
+    </li>
+
+    <li title="apps--accessories-calculator">
+      <div class="icon-box">
+        <svg class="icon" aria-hidden="true">
+          <use href="sprite.svg#apps--accessories-calculator"></use>
+        </svg>
+      </div>
+      <h2>apps--accessories-calculator</h2>
+    </li>
+
+    <li title="apps--accessories-character-map">
+      <div class="icon-box">
+        <svg class="icon" aria-hidden="true">
+          <use href="sprite.svg#apps--accessories-character-map"></use>
+        </svg>
+      </div>
+      <h2>apps--accessories-character-map</h2>
+    </li>
+
+    <li title="apps--accessories-text-editor">
+      <div class="icon-box">
+        <svg class="icon" aria-hidden="true">
+          <use href="sprite.svg#apps--accessories-text-editor"></use>
+        </svg>
+      </div>
+      <h2>apps--accessories-text-editor</h2>
+    </li>
+
+    <li title="apps--help-browser">
+      <div class="icon-box">
+        <svg class="icon" aria-hidden="true">
+          <use href="sprite.svg#apps--help-browser"></use>
+        </svg>
+      </div>
+      <h2>apps--help-browser</h2>
+    </li>
+
+    <li title="apps--internet-group-chat">
+      <div class="icon-box">
+        <svg class="icon" aria-hidden="true">
+          <use href="sprite.svg#apps--internet-group-chat"></use>
+        </svg>
+      </div>
+      <h2>apps--internet-group-chat</h2>
+    </li>
+
+    <li title="apps--internet-mail">
+      <div class="icon-box">
+        <svg class="icon" aria-hidden="true">
+          <use href="sprite.svg#apps--internet-mail"></use>
+        </svg>
+      </div>
+      <h2>apps--internet-mail</h2>
+    </li>
+
+    <li title="apps--internet-news-reader">
+      <div class="icon-box">
+        <svg class="icon" aria-hidden="true">
+          <use href="sprite.svg#apps--internet-news-reader"></use>
+        </svg>
+      </div>
+      <h2>apps--internet-news-reader</h2>
+    </li>
+
+    <li title="apps--internet-web-browser">
+      <div class="icon-box">
+        <svg class="icon" aria-hidden="true">
+          <use href="sprite.svg#apps--internet-web-browser"></use>
+        </svg>
+      </div>
+      <h2>apps--internet-web-browser</h2>
+    </li>
+
+    <li title="apps--office-calendar">
+      <div class="icon-box">
+        <svg class="icon" aria-hidden="true">
+          <use href="sprite.svg#apps--office-calendar"></use>
+        </svg>
+      </div>
+      <h2>apps--office-calendar</h2>
+    </li>
+
+    <li title="apps--preferences-desktop-accessibility">
+      <div class="icon-box">
+        <svg class="icon" aria-hidden="true">
+          <use href="sprite.svg#apps--preferences-desktop-accessibility"></use>
+        </svg>
+      </div>
+      <h2>apps--preferences-desktop-accessibility</h2>
+    </li>
+
+    <li title="apps--preferences-desktop-assistive-technology">
+      <div class="icon-box">
+        <svg class="icon" aria-hidden="true">
+          <use href="sprite.svg#apps--preferences-desktop-assistive-technology"></use>
+        </svg>
+      </div>
+      <h2>apps--preferences-desktop-assistive-technology</h2>
+    </li>
+
+    <li title="apps--preferences-desktop-font">
+      <div class="icon-box">
+        <svg class="icon" aria-hidden="true">
+          <use href="sprite.svg#apps--preferences-desktop-font"></use>
+        </svg>
+      </div>
+      <h2>apps--preferences-desktop-font</h2>
+    </li>
+
+    <li title="apps--preferences-desktop-keyboard-shortcuts">
+      <div class="icon-box">
+        <svg class="icon" aria-hidden="true">
+          <use href="sprite.svg#apps--preferences-desktop-keyboard-shortcuts"></use>
+        </svg>
+      </div>
+      <h2>apps--preferences-desktop-keyboard-shortcuts</h2>
+    </li>
+
+    <li title="apps--preferences-desktop-locale">
+      <div class="icon-box">
+        <svg class="icon" aria-hidden="true">
+          <use href="sprite.svg#apps--preferences-desktop-locale"></use>
+        </svg>
+      </div>
+      <h2>apps--preferences-desktop-locale</h2>
+    </li>
+
+    <li title="apps--preferences-desktop-multimedia">
+      <div class="icon-box">
+        <svg class="icon" aria-hidden="true">
+          <use href="sprite.svg#apps--preferences-desktop-multimedia"></use>
+        </svg>
+      </div>
+      <h2>apps--preferences-desktop-multimedia</h2>
+    </li>
+
+    <li title="apps--preferences-desktop-remote-desktop">
+      <div class="icon-box">
+        <svg class="icon" aria-hidden="true">
+          <use href="sprite.svg#apps--preferences-desktop-remote-desktop"></use>
+        </svg>
+      </div>
+      <h2>apps--preferences-desktop-remote-desktop</h2>
+    </li>
+
+    <li title="apps--preferences-desktop-screensaver">
+      <div class="icon-box">
+        <svg class="icon" aria-hidden="true">
+          <use href="sprite.svg#apps--preferences-desktop-screensaver"></use>
+        </svg>
+      </div>
+      <h2>apps--preferences-desktop-screensaver</h2>
+    </li>
+
+    <li title="apps--preferences-desktop-theme">
+      <div class="icon-box">
+        <svg class="icon" aria-hidden="true">
+          <use href="sprite.svg#apps--preferences-desktop-theme"></use>
+        </svg>
+      </div>
+      <h2>apps--preferences-desktop-theme</h2>
+    </li>
+
+    <li title="apps--preferences-desktop-wallpaper">
+      <div class="icon-box">
+        <svg class="icon" aria-hidden="true">
+          <use href="sprite.svg#apps--preferences-desktop-wallpaper"></use>
+        </svg>
+      </div>
+      <h2>apps--preferences-desktop-wallpaper</h2>
+    </li>
+
+    <li title="apps--preferences-system-network-proxy">
+      <div class="icon-box">
+        <svg class="icon" aria-hidden="true">
+          <use href="sprite.svg#apps--preferences-system-network-proxy"></use>
+        </svg>
+      </div>
+      <h2>apps--preferences-system-network-proxy</h2>
+    </li>
+
+    <li title="apps--preferences-system-session">
+      <div class="icon-box">
+        <svg class="icon" aria-hidden="true">
+          <use href="sprite.svg#apps--preferences-system-session"></use>
+        </svg>
+      </div>
+      <h2>apps--preferences-system-session</h2>
+    </li>
+
+    <li title="apps--preferences-system-windows">
+      <div class="icon-box">
+        <svg class="icon" aria-hidden="true">
+          <use href="sprite.svg#apps--preferences-system-windows"></use>
+        </svg>
+      </div>
+      <h2>apps--preferences-system-windows</h2>
+    </li>
+
+    <li title="apps--system-file-manager">
+      <div class="icon-box">
+        <svg class="icon" aria-hidden="true">
+          <use href="sprite.svg#apps--system-file-manager"></use>
+        </svg>
+      </div>
+      <h2>apps--system-file-manager</h2>
+    </li>
+
+    <li title="apps--system-installer">
+      <div class="icon-box">
+        <svg class="icon" aria-hidden="true">
+          <use href="sprite.svg#apps--system-installer"></use>
+        </svg>
+      </div>
+      <h2>apps--system-installer</h2>
+    </li>
+
+    <li title="apps--system-software-update">
+      <div class="icon-box">
+        <svg class="icon" aria-hidden="true">
+          <use href="sprite.svg#apps--system-software-update"></use>
+        </svg>
+      </div>
+      <h2>apps--system-software-update</h2>
+    </li>
+
+    <li title="apps--system-users">
+      <div class="icon-box">
+        <svg class="icon" aria-hidden="true">
+          <use href="sprite.svg#apps--system-users"></use>
+        </svg>
+      </div>
+      <h2>apps--system-users</h2>
+    </li>
+
+    <li title="apps--utilities-system-monitor">
+      <div class="icon-box">
+        <svg class="icon" aria-hidden="true">
+          <use href="sprite.svg#apps--utilities-system-monitor"></use>
+        </svg>
+      </div>
+      <h2>apps--utilities-system-monitor</h2>
+    </li>
+
+    <li title="apps--utilities-terminal">
+      <div class="icon-box">
+        <svg class="icon" aria-hidden="true">
+          <use href="sprite.svg#apps--utilities-terminal"></use>
+        </svg>
+      </div>
+      <h2>apps--utilities-terminal</h2>
+    </li>
+
+    <li title="categories--applications-accessories">
+      <div class="icon-box">
+        <svg class="icon" aria-hidden="true">
+          <use href="sprite.svg#categories--applications-accessories"></use>
+        </svg>
+      </div>
+      <h2>categories--applications-accessories</h2>
+    </li>
+
+    <li title="categories--applications-development">
+      <div class="icon-box">
+        <svg class="icon" aria-hidden="true">
+          <use href="sprite.svg#categories--applications-development"></use>
+        </svg>
+      </div>
+      <h2>categories--applications-development</h2>
+    </li>
+
+    <li title="categories--applications-games">
+      <div class="icon-box">
+        <svg class="icon" aria-hidden="true">
+          <use href="sprite.svg#categories--applications-games"></use>
+        </svg>
+      </div>
+      <h2>categories--applications-games</h2>
+    </li>
+
+    <li title="categories--applications-graphics">
+      <div class="icon-box">
+        <svg class="icon" aria-hidden="true">
+          <use href="sprite.svg#categories--applications-graphics"></use>
+        </svg>
+      </div>
+      <h2>categories--applications-graphics</h2>
+    </li>
+
+    <li title="categories--applications-internet">
+      <div class="icon-box">
+        <svg class="icon" aria-hidden="true">
+          <use href="sprite.svg#categories--applications-internet"></use>
+        </svg>
+      </div>
+      <h2>categories--applications-internet</h2>
+    </li>
+
+    <li title="categories--applications-multimedia">
+      <div class="icon-box">
+        <svg class="icon" aria-hidden="true">
+          <use href="sprite.svg#categories--applications-multimedia"></use>
+        </svg>
+      </div>
+      <h2>categories--applications-multimedia</h2>
+    </li>
+
+    <li title="categories--applications-office">
+      <div class="icon-box">
+        <svg class="icon" aria-hidden="true">
+          <use href="sprite.svg#categories--applications-office"></use>
+        </svg>
+      </div>
+      <h2>categories--applications-office</h2>
+    </li>
+
+    <li title="categories--applications-other">
+      <div class="icon-box">
+        <svg class="icon" aria-hidden="true">
+          <use href="sprite.svg#categories--applications-other"></use>
+        </svg>
+      </div>
+      <h2>categories--applications-other</h2>
+    </li>
+
+    <li title="categories--applications-system">
+      <div class="icon-box">
+        <svg class="icon" aria-hidden="true">
+          <use href="sprite.svg#categories--applications-system"></use>
+        </svg>
+      </div>
+      <h2>categories--applications-system</h2>
+    </li>
+
+    <li title="categories--preferences-desktop">
+      <div class="icon-box">
+        <svg class="icon" aria-hidden="true">
+          <use href="sprite.svg#categories--preferences-desktop"></use>
+        </svg>
+      </div>
+      <h2>categories--preferences-desktop</h2>
+    </li>
+
+    <li title="categories--preferences-desktop-peripherals">
+      <div class="icon-box">
+        <svg class="icon" aria-hidden="true">
+          <use href="sprite.svg#categories--preferences-desktop-peripherals"></use>
+        </svg>
+      </div>
+      <h2>categories--preferences-desktop-peripherals</h2>
+    </li>
+
+    <li title="categories--preferences-system">
+      <div class="icon-box">
+        <svg class="icon" aria-hidden="true">
+          <use href="sprite.svg#categories--preferences-system"></use>
+        </svg>
+      </div>
+      <h2>categories--preferences-system</h2>
+    </li>
+
+    <li title="devices--audio-card">
+      <div class="icon-box">
+        <svg class="icon" aria-hidden="true">
+          <use href="sprite.svg#devices--audio-card"></use>
+        </svg>
+      </div>
+      <h2>devices--audio-card</h2>
+    </li>
+
+    <li title="devices--audio-input-microphone">
+      <div class="icon-box">
+        <svg class="icon" aria-hidden="true">
+          <use href="sprite.svg#devices--audio-input-microphone"></use>
+        </svg>
+      </div>
+      <h2>devices--audio-input-microphone</h2>
+    </li>
+
+    <li title="devices--battery">
+      <div class="icon-box">
+        <svg class="icon" aria-hidden="true">
+          <use href="sprite.svg#devices--battery"></use>
+        </svg>
+      </div>
+      <h2>devices--battery</h2>
+    </li>
+
+    <li title="devices--camera-photo">
+      <div class="icon-box">
+        <svg class="icon" aria-hidden="true">
+          <use href="sprite.svg#devices--camera-photo"></use>
+        </svg>
+      </div>
+      <h2>devices--camera-photo</h2>
+    </li>
+
+    <li title="devices--camera-video">
+      <div class="icon-box">
+        <svg class="icon" aria-hidden="true">
+          <use href="sprite.svg#devices--camera-video"></use>
+        </svg>
+      </div>
+      <h2>devices--camera-video</h2>
+    </li>
+
+    <li title="devices--computer">
+      <div class="icon-box">
+        <svg class="icon" aria-hidden="true">
+          <use href="sprite.svg#devices--computer"></use>
+        </svg>
+      </div>
+      <h2>devices--computer</h2>
+    </li>
+
+    <li title="devices--drive-harddisk">
+      <div class="icon-box">
+        <svg class="icon" aria-hidden="true">
+          <use href="sprite.svg#devices--drive-harddisk"></use>
+        </svg>
+      </div>
+      <h2>devices--drive-harddisk</h2>
+    </li>
+
+    <li title="devices--drive-optical">
+      <div class="icon-box">
+        <svg class="icon" aria-hidden="true">
+          <use href="sprite.svg#devices--drive-optical"></use>
+        </svg>
+      </div>
+      <h2>devices--drive-optical</h2>
+    </li>
+
+    <li title="devices--drive-removable-media">
+      <div class="icon-box">
+        <svg class="icon" aria-hidden="true">
+          <use href="sprite.svg#devices--drive-removable-media"></use>
+        </svg>
+      </div>
+      <h2>devices--drive-removable-media</h2>
+    </li>
+
+    <li title="devices--input-gaming">
+      <div class="icon-box">
+        <svg class="icon" aria-hidden="true">
+          <use href="sprite.svg#devices--input-gaming"></use>
+        </svg>
+      </div>
+      <h2>devices--input-gaming</h2>
+    </li>
+
+    <li title="devices--input-keyboard">
+      <div class="icon-box">
+        <svg class="icon" aria-hidden="true">
+          <use href="sprite.svg#devices--input-keyboard"></use>
+        </svg>
+      </div>
+      <h2>devices--input-keyboard</h2>
+    </li>
+
+    <li title="devices--input-mouse">
+      <div class="icon-box">
+        <svg class="icon" aria-hidden="true">
+          <use href="sprite.svg#devices--input-mouse"></use>
+        </svg>
+      </div>
+      <h2>devices--input-mouse</h2>
+    </li>
+
+    <li title="devices--media-flash">
+      <div class="icon-box">
+        <svg class="icon" aria-hidden="true">
+          <use href="sprite.svg#devices--media-flash"></use>
+        </svg>
+      </div>
+      <h2>devices--media-flash</h2>
+    </li>
+
+    <li title="devices--media-floppy">
+      <div class="icon-box">
+        <svg class="icon" aria-hidden="true">
+          <use href="sprite.svg#devices--media-floppy"></use>
+        </svg>
+      </div>
+      <h2>devices--media-floppy</h2>
+    </li>
+
+    <li title="devices--media-optical">
+      <div class="icon-box">
+        <svg class="icon" aria-hidden="true">
+          <use href="sprite.svg#devices--media-optical"></use>
+        </svg>
+      </div>
+      <h2>devices--media-optical</h2>
+    </li>
+
+    <li title="devices--multimedia-player">
+      <div class="icon-box">
+        <svg class="icon" aria-hidden="true">
+          <use href="sprite.svg#devices--multimedia-player"></use>
+        </svg>
+      </div>
+      <h2>devices--multimedia-player</h2>
+    </li>
+
+    <li title="devices--network-wired">
+      <div class="icon-box">
+        <svg class="icon" aria-hidden="true">
+          <use href="sprite.svg#devices--network-wired"></use>
+        </svg>
+      </div>
+      <h2>devices--network-wired</h2>
+    </li>
+
+    <li title="devices--network-wireless">
+      <div class="icon-box">
+        <svg class="icon" aria-hidden="true">
+          <use href="sprite.svg#devices--network-wireless"></use>
+        </svg>
+      </div>
+      <h2>devices--network-wireless</h2>
+    </li>
+
+    <li title="devices--printer">
+      <div class="icon-box">
+        <svg class="icon" aria-hidden="true">
+          <use href="sprite.svg#devices--printer"></use>
+        </svg>
+      </div>
+      <h2>devices--printer</h2>
+    </li>
+
+    <li title="devices--video-display">
+      <div class="icon-box">
+        <svg class="icon" aria-hidden="true">
+          <use href="sprite.svg#devices--video-display"></use>
+        </svg>
+      </div>
+      <h2>devices--video-display</h2>
+    </li>
+
+    <li title="emblems--emblem-favorite">
+      <div class="icon-box">
+        <svg class="icon" aria-hidden="true">
+          <use href="sprite.svg#emblems--emblem-favorite"></use>
+        </svg>
+      </div>
+      <h2>emblems--emblem-favorite</h2>
+    </li>
+
+    <li title="emblems--emblem-important">
+      <div class="icon-box">
+        <svg class="icon" aria-hidden="true">
+          <use href="sprite.svg#emblems--emblem-important"></use>
+        </svg>
+      </div>
+      <h2>emblems--emblem-important</h2>
+    </li>
+
+    <li title="emblems--emblem-photos">
+      <div class="icon-box">
+        <svg class="icon" aria-hidden="true">
+          <use href="sprite.svg#emblems--emblem-photos"></use>
+        </svg>
+      </div>
+      <h2>emblems--emblem-photos</h2>
+    </li>
+
+    <li title="emblems--emblem-readonly">
+      <div class="icon-box">
+        <svg class="icon" aria-hidden="true">
+          <use href="sprite.svg#emblems--emblem-readonly"></use>
+        </svg>
+      </div>
+      <h2>emblems--emblem-readonly</h2>
+    </li>
+
+    <li title="emblems--emblem-symbolic-link">
+      <div class="icon-box">
+        <svg class="icon" aria-hidden="true">
+          <use href="sprite.svg#emblems--emblem-symbolic-link"></use>
+        </svg>
+      </div>
+      <h2>emblems--emblem-symbolic-link</h2>
+    </li>
+
+    <li title="emblems--emblem-system">
+      <div class="icon-box">
+        <svg class="icon" aria-hidden="true">
+          <use href="sprite.svg#emblems--emblem-system"></use>
+        </svg>
+      </div>
+      <h2>emblems--emblem-system</h2>
+    </li>
+
+    <li title="emblems--emblem-unreadable">
+      <div class="icon-box">
+        <svg class="icon" aria-hidden="true">
+          <use href="sprite.svg#emblems--emblem-unreadable"></use>
+        </svg>
+      </div>
+      <h2>emblems--emblem-unreadable</h2>
+    </li>
+
+    <li title="emotes--face-angel">
+      <div class="icon-box">
+        <svg class="icon" aria-hidden="true">
+          <use href="sprite.svg#emotes--face-angel"></use>
+        </svg>
+      </div>
+      <h2>emotes--face-angel</h2>
+    </li>
+
+    <li title="emotes--face-crying">
+      <div class="icon-box">
+        <svg class="icon" aria-hidden="true">
+          <use href="sprite.svg#emotes--face-crying"></use>
+        </svg>
+      </div>
+      <h2>emotes--face-crying</h2>
+    </li>
+
+    <li title="emotes--face-devilish">
+      <div class="icon-box">
+        <svg class="icon" aria-hidden="true">
+          <use href="sprite.svg#emotes--face-devilish"></use>
+        </svg>
+      </div>
+      <h2>emotes--face-devilish</h2>
+    </li>
+
+    <li title="emotes--face-glasses">
+      <div class="icon-box">
+        <svg class="icon" aria-hidden="true">
+          <use href="sprite.svg#emotes--face-glasses"></use>
+        </svg>
+      </div>
+      <h2>emotes--face-glasses</h2>
+    </li>
+
+    <li title="emotes--face-grin">
+      <div class="icon-box">
+        <svg class="icon" aria-hidden="true">
+          <use href="sprite.svg#emotes--face-grin"></use>
+        </svg>
+      </div>
+      <h2>emotes--face-grin</h2>
+    </li>
+
+    <li title="emotes--face-kiss">
+      <div class="icon-box">
+        <svg class="icon" aria-hidden="true">
+          <use href="sprite.svg#emotes--face-kiss"></use>
+        </svg>
+      </div>
+      <h2>emotes--face-kiss</h2>
+    </li>
+
+    <li title="emotes--face-monkey">
+      <div class="icon-box">
+        <svg class="icon" aria-hidden="true">
+          <use href="sprite.svg#emotes--face-monkey"></use>
+        </svg>
+      </div>
+      <h2>emotes--face-monkey</h2>
+    </li>
+
+    <li title="emotes--face-plain">
+      <div class="icon-box">
+        <svg class="icon" aria-hidden="true">
+          <use href="sprite.svg#emotes--face-plain"></use>
+        </svg>
+      </div>
+      <h2>emotes--face-plain</h2>
+    </li>
+
+    <li title="emotes--face-sad">
+      <div class="icon-box">
+        <svg class="icon" aria-hidden="true">
+          <use href="sprite.svg#emotes--face-sad"></use>
+        </svg>
+      </div>
+      <h2>emotes--face-sad</h2>
+    </li>
+
+    <li title="emotes--face-smile">
+      <div class="icon-box">
+        <svg class="icon" aria-hidden="true">
+          <use href="sprite.svg#emotes--face-smile"></use>
+        </svg>
+      </div>
+      <h2>emotes--face-smile</h2>
+    </li>
+
+    <li title="emotes--face-smile-big">
+      <div class="icon-box">
+        <svg class="icon" aria-hidden="true">
+          <use href="sprite.svg#emotes--face-smile-big"></use>
+        </svg>
+      </div>
+      <h2>emotes--face-smile-big</h2>
+    </li>
+
+    <li title="emotes--face-surprise">
+      <div class="icon-box">
+        <svg class="icon" aria-hidden="true">
+          <use href="sprite.svg#emotes--face-surprise"></use>
+        </svg>
+      </div>
+      <h2>emotes--face-surprise</h2>
+    </li>
+
+    <li title="emotes--face-wink">
+      <div class="icon-box">
+        <svg class="icon" aria-hidden="true">
+          <use href="sprite.svg#emotes--face-wink"></use>
+        </svg>
+      </div>
+      <h2>emotes--face-wink</h2>
+    </li>
+
+    <li title="mimetypes--application-certificate">
+      <div class="icon-box">
+        <svg class="icon" aria-hidden="true">
+          <use href="sprite.svg#mimetypes--application-certificate"></use>
+        </svg>
+      </div>
+      <h2>mimetypes--application-certificate</h2>
+    </li>
+
+    <li title="mimetypes--application-x-executable">
+      <div class="icon-box">
+        <svg class="icon" aria-hidden="true">
+          <use href="sprite.svg#mimetypes--application-x-executable"></use>
+        </svg>
+      </div>
+      <h2>mimetypes--application-x-executable</h2>
+    </li>
+
+    <li title="mimetypes--audio-x-generic">
+      <div class="icon-box">
+        <svg class="icon" aria-hidden="true">
+          <use href="sprite.svg#mimetypes--audio-x-generic"></use>
+        </svg>
+      </div>
+      <h2>mimetypes--audio-x-generic</h2>
+    </li>
+
+    <li title="mimetypes--font-x-generic">
+      <div class="icon-box">
+        <svg class="icon" aria-hidden="true">
+          <use href="sprite.svg#mimetypes--font-x-generic"></use>
+        </svg>
+      </div>
+      <h2>mimetypes--font-x-generic</h2>
+    </li>
+
+    <li title="mimetypes--image-x-generic">
+      <div class="icon-box">
+        <svg class="icon" aria-hidden="true">
+          <use href="sprite.svg#mimetypes--image-x-generic"></use>
+        </svg>
+      </div>
+      <h2>mimetypes--image-x-generic</h2>
+    </li>
+
+    <li title="mimetypes--package-x-generic">
+      <div class="icon-box">
+        <svg class="icon" aria-hidden="true">
+          <use href="sprite.svg#mimetypes--package-x-generic"></use>
+        </svg>
+      </div>
+      <h2>mimetypes--package-x-generic</h2>
+    </li>
+
+    <li title="mimetypes--text-html">
+      <div class="icon-box">
+        <svg class="icon" aria-hidden="true">
+          <use href="sprite.svg#mimetypes--text-html"></use>
+        </svg>
+      </div>
+      <h2>mimetypes--text-html</h2>
+    </li>
+
+    <li title="mimetypes--text-x-generic">
+      <div class="icon-box">
+        <svg class="icon" aria-hidden="true">
+          <use href="sprite.svg#mimetypes--text-x-generic"></use>
+        </svg>
+      </div>
+      <h2>mimetypes--text-x-generic</h2>
+    </li>
+
+    <li title="mimetypes--text-x-generic-template">
+      <div class="icon-box">
+        <svg class="icon" aria-hidden="true">
+          <use href="sprite.svg#mimetypes--text-x-generic-template"></use>
+        </svg>
+      </div>
+      <h2>mimetypes--text-x-generic-template</h2>
+    </li>
+
+    <li title="mimetypes--text-x-script">
+      <div class="icon-box">
+        <svg class="icon" aria-hidden="true">
+          <use href="sprite.svg#mimetypes--text-x-script"></use>
+        </svg>
+      </div>
+      <h2>mimetypes--text-x-script</h2>
+    </li>
+
+    <li title="mimetypes--video-x-generic">
+      <div class="icon-box">
+        <svg class="icon" aria-hidden="true">
+          <use href="sprite.svg#mimetypes--video-x-generic"></use>
+        </svg>
+      </div>
+      <h2>mimetypes--video-x-generic</h2>
+    </li>
+
+    <li title="mimetypes--x-office-address-book">
+      <div class="icon-box">
+        <svg class="icon" aria-hidden="true">
+          <use href="sprite.svg#mimetypes--x-office-address-book"></use>
+        </svg>
+      </div>
+      <h2>mimetypes--x-office-address-book</h2>
+    </li>
+
+    <li title="mimetypes--x-office-calendar">
+      <div class="icon-box">
+        <svg class="icon" aria-hidden="true">
+          <use href="sprite.svg#mimetypes--x-office-calendar"></use>
+        </svg>
+      </div>
+      <h2>mimetypes--x-office-calendar</h2>
+    </li>
+
+    <li title="mimetypes--x-office-document">
+      <div class="icon-box">
+        <svg class="icon" aria-hidden="true">
+          <use href="sprite.svg#mimetypes--x-office-document"></use>
+        </svg>
+      </div>
+      <h2>mimetypes--x-office-document</h2>
+    </li>
+
+    <li title="mimetypes--x-office-document-template">
+      <div class="icon-box">
+        <svg class="icon" aria-hidden="true">
+          <use href="sprite.svg#mimetypes--x-office-document-template"></use>
+        </svg>
+      </div>
+      <h2>mimetypes--x-office-document-template</h2>
+    </li>
+
+    <li title="mimetypes--x-office-drawing">
+      <div class="icon-box">
+        <svg class="icon" aria-hidden="true">
+          <use href="sprite.svg#mimetypes--x-office-drawing"></use>
+        </svg>
+      </div>
+      <h2>mimetypes--x-office-drawing</h2>
+    </li>
+
+    <li title="mimetypes--x-office-drawing-template">
+      <div class="icon-box">
+        <svg class="icon" aria-hidden="true">
+          <use href="sprite.svg#mimetypes--x-office-drawing-template"></use>
+        </svg>
+      </div>
+      <h2>mimetypes--x-office-drawing-template</h2>
+    </li>
+
+    <li title="mimetypes--x-office-presentation">
+      <div class="icon-box">
+        <svg class="icon" aria-hidden="true">
+          <use href="sprite.svg#mimetypes--x-office-presentation"></use>
+        </svg>
+      </div>
+      <h2>mimetypes--x-office-presentation</h2>
+    </li>
+
+    <li title="mimetypes--x-office-presentation-template">
+      <div class="icon-box">
+        <svg class="icon" aria-hidden="true">
+          <use href="sprite.svg#mimetypes--x-office-presentation-template"></use>
+        </svg>
+      </div>
+      <h2>mimetypes--x-office-presentation-template</h2>
+    </li>
+
+    <li title="mimetypes--x-office-spreadsheet">
+      <div class="icon-box">
+        <svg class="icon" aria-hidden="true">
+          <use href="sprite.svg#mimetypes--x-office-spreadsheet"></use>
+        </svg>
+      </div>
+      <h2>mimetypes--x-office-spreadsheet</h2>
+    </li>
+
+    <li title="mimetypes--x-office-spreadsheet-template">
+      <div class="icon-box">
+        <svg class="icon" aria-hidden="true">
+          <use href="sprite.svg#mimetypes--x-office-spreadsheet-template"></use>
+        </svg>
+      </div>
+      <h2>mimetypes--x-office-spreadsheet-template</h2>
+    </li>
+
+    <li title="places--folder">
+      <div class="icon-box">
+        <svg class="icon" aria-hidden="true">
+          <use href="sprite.svg#places--folder"></use>
+        </svg>
+      </div>
+      <h2>places--folder</h2>
+    </li>
+
+    <li title="places--folder-remote">
+      <div class="icon-box">
+        <svg class="icon" aria-hidden="true">
+          <use href="sprite.svg#places--folder-remote"></use>
+        </svg>
+      </div>
+      <h2>places--folder-remote</h2>
+    </li>
+
+    <li title="places--folder-saved-search">
+      <div class="icon-box">
+        <svg class="icon" aria-hidden="true">
+          <use href="sprite.svg#places--folder-saved-search"></use>
+        </svg>
+      </div>
+      <h2>places--folder-saved-search</h2>
+    </li>
+
+    <li title="places--network-server">
+      <div class="icon-box">
+        <svg class="icon" aria-hidden="true">
+          <use href="sprite.svg#places--network-server"></use>
+        </svg>
+      </div>
+      <h2>places--network-server</h2>
+    </li>
+
+    <li title="places--network-workgroup">
+      <div class="icon-box">
+        <svg class="icon" aria-hidden="true">
+          <use href="sprite.svg#places--network-workgroup"></use>
+        </svg>
+      </div>
+      <h2>places--network-workgroup</h2>
+    </li>
+
+    <li title="places--start-here">
+      <div class="icon-box">
+        <svg class="icon" aria-hidden="true">
+          <use href="sprite.svg#places--start-here"></use>
+        </svg>
+      </div>
+      <h2>places--start-here</h2>
+    </li>
+
+    <li title="places--user-desktop">
+      <div class="icon-box">
+        <svg class="icon" aria-hidden="true">
+          <use href="sprite.svg#places--user-desktop"></use>
+        </svg>
+      </div>
+      <h2>places--user-desktop</h2>
+    </li>
+
+    <li title="places--user-home">
+      <div class="icon-box">
+        <svg class="icon" aria-hidden="true">
+          <use href="sprite.svg#places--user-home"></use>
+        </svg>
+      </div>
+      <h2>places--user-home</h2>
+    </li>
+
+    <li title="places--user-trash">
+      <div class="icon-box">
+        <svg class="icon" aria-hidden="true">
+          <use href="sprite.svg#places--user-trash"></use>
+        </svg>
+      </div>
+      <h2>places--user-trash</h2>
+    </li>
+
+    <li title="status--audio-volume-high">
+      <div class="icon-box">
+        <svg class="icon" aria-hidden="true">
+          <use href="sprite.svg#status--audio-volume-high"></use>
+        </svg>
+      </div>
+      <h2>status--audio-volume-high</h2>
+    </li>
+
+    <li title="status--audio-volume-low">
+      <div class="icon-box">
+        <svg class="icon" aria-hidden="true">
+          <use href="sprite.svg#status--audio-volume-low"></use>
+        </svg>
+      </div>
+      <h2>status--audio-volume-low</h2>
+    </li>
+
+    <li title="status--audio-volume-medium">
+      <div class="icon-box">
+        <svg class="icon" aria-hidden="true">
+          <use href="sprite.svg#status--audio-volume-medium"></use>
+        </svg>
+      </div>
+      <h2>status--audio-volume-medium</h2>
+    </li>
+
+    <li title="status--audio-volume-muted">
+      <div class="icon-box">
+        <svg class="icon" aria-hidden="true">
+          <use href="sprite.svg#status--audio-volume-muted"></use>
+        </svg>
+      </div>
+      <h2>status--audio-volume-muted</h2>
+    </li>
+
+    <li title="status--battery-caution">
+      <div class="icon-box">
+        <svg class="icon" aria-hidden="true">
+          <use href="sprite.svg#status--battery-caution"></use>
+        </svg>
+      </div>
+      <h2>status--battery-caution</h2>
+    </li>
+
+    <li title="status--dialog-error">
+      <div class="icon-box">
+        <svg class="icon" aria-hidden="true">
+          <use href="sprite.svg#status--dialog-error"></use>
+        </svg>
+      </div>
+      <h2>status--dialog-error</h2>
+    </li>
+
+    <li title="status--dialog-information">
+      <div class="icon-box">
+        <svg class="icon" aria-hidden="true">
+          <use href="sprite.svg#status--dialog-information"></use>
+        </svg>
+      </div>
+      <h2>status--dialog-information</h2>
+    </li>
+
+    <li title="status--dialog-warning">
+      <div class="icon-box">
+        <svg class="icon" aria-hidden="true">
+          <use href="sprite.svg#status--dialog-warning"></use>
+        </svg>
+      </div>
+      <h2>status--dialog-warning</h2>
+    </li>
+
+    <li title="status--folder-drag-accept">
+      <div class="icon-box">
+        <svg class="icon" aria-hidden="true">
+          <use href="sprite.svg#status--folder-drag-accept"></use>
+        </svg>
+      </div>
+      <h2>status--folder-drag-accept</h2>
+    </li>
+
+    <li title="status--folder-open">
+      <div class="icon-box">
+        <svg class="icon" aria-hidden="true">
+          <use href="sprite.svg#status--folder-open"></use>
+        </svg>
+      </div>
+      <h2>status--folder-open</h2>
+    </li>
+
+    <li title="status--folder-visiting">
+      <div class="icon-box">
+        <svg class="icon" aria-hidden="true">
+          <use href="sprite.svg#status--folder-visiting"></use>
+        </svg>
+      </div>
+      <h2>status--folder-visiting</h2>
+    </li>
+
+    <li title="status--image-loading">
+      <div class="icon-box">
+        <svg class="icon" aria-hidden="true">
+          <use href="sprite.svg#status--image-loading"></use>
+        </svg>
+      </div>
+      <h2>status--image-loading</h2>
+    </li>
+
+    <li title="status--image-missing">
+      <div class="icon-box">
+        <svg class="icon" aria-hidden="true">
+          <use href="sprite.svg#status--image-missing"></use>
+        </svg>
+      </div>
+      <h2>status--image-missing</h2>
+    </li>
+
+    <li title="status--mail-attachment">
+      <div class="icon-box">
+        <svg class="icon" aria-hidden="true">
+          <use href="sprite.svg#status--mail-attachment"></use>
+        </svg>
+      </div>
+      <h2>status--mail-attachment</h2>
+    </li>
+
+    <li title="status--network-error">
+      <div class="icon-box">
+        <svg class="icon" aria-hidden="true">
+          <use href="sprite.svg#status--network-error"></use>
+        </svg>
+      </div>
+      <h2>status--network-error</h2>
+    </li>
+
+    <li title="status--network-idle">
+      <div class="icon-box">
+        <svg class="icon" aria-hidden="true">
+          <use href="sprite.svg#status--network-idle"></use>
+        </svg>
+      </div>
+      <h2>status--network-idle</h2>
+    </li>
+
+    <li title="status--network-offline">
+      <div class="icon-box">
+        <svg class="icon" aria-hidden="true">
+          <use href="sprite.svg#status--network-offline"></use>
+        </svg>
+      </div>
+      <h2>status--network-offline</h2>
+    </li>
+
+    <li title="status--network-receive">
+      <div class="icon-box">
+        <svg class="icon" aria-hidden="true">
+          <use href="sprite.svg#status--network-receive"></use>
+        </svg>
+      </div>
+      <h2>status--network-receive</h2>
+    </li>
+
+    <li title="status--network-transmit">
+      <div class="icon-box">
+        <svg class="icon" aria-hidden="true">
+          <use href="sprite.svg#status--network-transmit"></use>
+        </svg>
+      </div>
+      <h2>status--network-transmit</h2>
+    </li>
+
+    <li title="status--network-transmit-receive">
+      <div class="icon-box">
+        <svg class="icon" aria-hidden="true">
+          <use href="sprite.svg#status--network-transmit-receive"></use>
+        </svg>
+      </div>
+      <h2>status--network-transmit-receive</h2>
+    </li>
+
+    <li title="status--network-wireless-encrypted">
+      <div class="icon-box">
+        <svg class="icon" aria-hidden="true">
+          <use href="sprite.svg#status--network-wireless-encrypted"></use>
+        </svg>
+      </div>
+      <h2>status--network-wireless-encrypted</h2>
+    </li>
+
+    <li title="status--printer-error">
+      <div class="icon-box">
+        <svg class="icon" aria-hidden="true">
+          <use href="sprite.svg#status--printer-error"></use>
+        </svg>
+      </div>
+      <h2>status--printer-error</h2>
+    </li>
+
+    <li title="status--software-update-available">
+      <div class="icon-box">
+        <svg class="icon" aria-hidden="true">
+          <use href="sprite.svg#status--software-update-available"></use>
+        </svg>
+      </div>
+      <h2>status--software-update-available</h2>
+    </li>
+
+    <li title="status--software-update-urgent">
+      <div class="icon-box">
+        <svg class="icon" aria-hidden="true">
+          <use href="sprite.svg#status--software-update-urgent"></use>
+        </svg>
+      </div>
+      <h2>status--software-update-urgent</h2>
+    </li>
+
+    <li title="status--user-trash-full">
+      <div class="icon-box">
+        <svg class="icon" aria-hidden="true">
+          <use href="sprite.svg#status--user-trash-full"></use>
+        </svg>
+      </div>
+      <h2>status--user-trash-full</h2>
+    </li>
+
+    <li title="status--weather-clear">
+      <div class="icon-box">
+        <svg class="icon" aria-hidden="true">
+          <use href="sprite.svg#status--weather-clear"></use>
+        </svg>
+      </div>
+      <h2>status--weather-clear</h2>
+    </li>
+
+    <li title="status--weather-clear-night">
+      <div class="icon-box">
+        <svg class="icon" aria-hidden="true">
+          <use href="sprite.svg#status--weather-clear-night"></use>
+        </svg>
+      </div>
+      <h2>status--weather-clear-night</h2>
+    </li>
+
+    <li title="status--weather-few-clouds">
+      <div class="icon-box">
+        <svg class="icon" aria-hidden="true">
+          <use href="sprite.svg#status--weather-few-clouds"></use>
+        </svg>
+      </div>
+      <h2>status--weather-few-clouds</h2>
+    </li>
+
+    <li title="status--weather-few-clouds-night">
+      <div class="icon-box">
+        <svg class="icon" aria-hidden="true">
+          <use href="sprite.svg#status--weather-few-clouds-night"></use>
+        </svg>
+      </div>
+      <h2>status--weather-few-clouds-night</h2>
+    </li>
+
+    <li title="status--weather-overcast">
+      <div class="icon-box">
+        <svg class="icon" aria-hidden="true">
+          <use href="sprite.svg#status--weather-overcast"></use>
+        </svg>
+      </div>
+      <h2>status--weather-overcast</h2>
+    </li>
+
+    <li title="status--weather-severe-alert">
+      <div class="icon-box">
+        <svg class="icon" aria-hidden="true">
+          <use href="sprite.svg#status--weather-severe-alert"></use>
+        </svg>
+      </div>
+      <h2>status--weather-severe-alert</h2>
+    </li>
+
+    <li title="status--weather-showers">
+      <div class="icon-box">
+        <svg class="icon" aria-hidden="true">
+          <use href="sprite.svg#status--weather-showers"></use>
+        </svg>
+      </div>
+      <h2>status--weather-showers</h2>
+    </li>
+
+    <li title="status--weather-showers-scattered">
+      <div class="icon-box">
+        <svg class="icon" aria-hidden="true">
+          <use href="sprite.svg#status--weather-showers-scattered"></use>
+        </svg>
+      </div>
+      <h2>status--weather-showers-scattered</h2>
+    </li>
+
+    <li title="status--weather-snow">
+      <div class="icon-box">
+        <svg class="icon" aria-hidden="true">
+          <use href="sprite.svg#status--weather-snow"></use>
+        </svg>
+      </div>
+      <h2>status--weather-snow</h2>
+    </li>
+
+    <li title="status--weather-storm">
+      <div class="icon-box">
+        <svg class="icon" aria-hidden="true">
+          <use href="sprite.svg#status--weather-storm"></use>
+        </svg>
+      </div>
+      <h2>status--weather-storm</h2>
+    </li>
+
+  </ul>
+
+  <footer>
+    Generated at Sun, 11 Oct 2026 23:10:45 GMT by
+    <a href="https://github.com/svgforge/svgforge" target="_blank" rel="noopener noreferrer">svgforge</a>.
+  </footer>
+</body>
+</html>

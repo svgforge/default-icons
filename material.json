@@ -18,7 +18,7 @@
   },
   "mode": {
     "symbol": {
-      "sprite": "sprite.svg",
+      "sprite": "icons.svg",
       "render": {
         "css": false
       },

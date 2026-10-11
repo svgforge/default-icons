@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Icon sprite preview | notor</title>
+  <style>
+    :root {
+      --icon-size: 40px;
+      --gutter: 8px;
+    }
+
+    body {
+      margin: 0;
+      padding: 2rem;
+      color: #222;
+      background: #fff;
+      font-family: system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+      font-size: 1rem;
+      line-height: 1.5;
+    }
+
+    h1 {
+      margin-top: 0;
+    }
+
+    .icon {
+      width: var(--icon-size);
+      height: var(--icon-size);
+      fill: currentColor;
+    }
+
+    .icon-list {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(96px, 1fr));
+      gap: 1.25rem;
+      margin: 0 0 1.25rem;
+      padding: 0;
+      list-style: none;
+    }
+
+    .icon-list li {
+      position: relative;
+      margin: 0;
+      padding: var(--gutter);
+      text-align: center;
+      border: 1px solid #ccc;
+      cursor: default;
+    }
+
+    .icon-list .icon-box {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+      aspect-ratio: 1 / 1;
+      border: 1px solid #ddd;
+      background-color: #eee;
+      background-image:
+        linear-gradient(45deg, #ccc 25%, transparent 25%, transparent 75%, #ccc 75%, #ccc),
+        linear-gradient(45deg, #ccc 25%, transparent 25%, transparent 75%, #ccc 75%, #ccc);
+      background-size: calc(var(--gutter) * 1.5) calc(var(--gutter) * 1.5);
+      background-position: 0 0, calc(var(--gutter) * 0.75) calc(var(--gutter) * 0.75);
+    }
+
+    .icon-list li h2 {
+      margin: 0.25rem 0 0;
+      font-size: 0.75rem;
+      font-weight: 400;
+      word-break: break-word;
+    }
+
+    footer {
+      margin-top: 2rem;
+      font-size: 0.75rem;
+      color: #666;
+    }
+  </style>
+</head>
+<body>
+{{ if it.inline }}
+  <!--
+  Inline <symbol> sprite
+  ====================================================================================================
+  The <symbol> definitions are embedded once so the <use> references below resolve to an
+  in-document fragment identifier. See the svgforge documentation for detachable vs. embedded sprites.
+  -->
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+{{ for s of shapes }}
+    {{ s.svg |> safe }}
+{{ /for }}
+  </svg>
+{{ /if }}
+
+  <h1>Icon sprite preview</h1>
+  <p>{{ shapes.length }} icons · {{ if it.inline }}inline{{ else }}external{{ /if }} sprite</p>
+
+  <ul class="icon-list">
+{{ for s of shapes }}
+    <li title="{{ s.name }}">
+      <div class="icon-box">
+        <svg class="icon" aria-hidden="true">
+          <use href="{{ it.useRef }}{{ s.name }}"></use>
+        </svg>
+      </div>
+      <h2>{{ s.name }}</h2>
+    </li>
+{{ /for }}
+  </ul>
+
+  <footer>
+    Generated at {{ date }} by
+    <a href="https://github.com/svgforge/svgforge" target="_blank" rel="noopener noreferrer">svgforge</a>.
+  </footer>
+</body>
+</html>

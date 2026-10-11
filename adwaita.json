@@ -1,0 +1,14 @@
+{
+  "dest": "./dist/adwaita",
+  "mode": {
+    "symbol": {
+      "sprite": "icons.svg",
+      "render": {
+        "css": false
+      },
+      "example": {
+        "dest": "icons.html"
+      }
+    }
+  }
+}

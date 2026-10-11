@@ -6,7 +6,10 @@
       "render": {
         "css": false
       },
-      "example": true
+      "example": {
+        "template": "./icons-template.vto",
+        "dest": "icons.html"
+      }
     }
   }
 }

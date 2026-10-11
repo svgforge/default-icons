@@ -1,0 +1,590 @@
+<!doctype html>
+
+<!--
+Sprite preview layout (shared)
+====================================================================================================
+Hosts the mode-specific preview content (title, header, hints, sections) that the per-mode templates
+provide via slots. When the sprite is embedded (the mode's `inline` option), it is rendered into the
+document above the header and referenced by an internal fragment identifier (`href="#<id>"`);
+otherwise the external sprite file is referenced by URL + fragment identifier
+(`href="<sprite>#<id>"`).
+-->
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>SVG &lt;symbol&gt; sprite preview | svgforge</title>
+
+    <style>
+    body {
+  padding: 0;
+  margin: 0;
+  color: #666;
+  background: #fafafa;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1em;
+  line-height: 1.4;
+}
+
+header {
+  display: block;
+  padding: 3em 3em 2em;
+  background-color: #fff;
+}
+
+header p {
+  margin: 2em 0 0;
+}
+
+section {
+  border-top: 1px solid #eee;
+  padding: 2em 3em 0;
+}
+
+.grid {
+  display: grid;
+  gap: clamp(1rem, 2.5vw, 2rem);
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.grid li {
+  background-color: #fff;
+  vertical-align: top;
+  border: 1px solid #ccc;
+  padding: 1em;
+  cursor: default;
+}
+
+.icon-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  width: 100%;
+  height: 144px;
+  position: relative;
+  background: #ccc url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12'%3E%3Cpath fill='%23fff' d='M6 0h6v6H6zM0 6h6v6H0z'/%3E%3C/svg%3E") top left repeat;
+  border: 1px solid #ccc;
+}
+
+.icon {
+  display: inline-block;
+}
+
+h1 {
+  margin-top: 0;
+}
+
+.grid li figure {
+  margin: 0;
+  padding: 0;
+}
+
+.grid li figcaption .name {
+  display: block;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.grid li figcaption .file-size {
+  font-size: .8em;
+  opacity: .7;
+}
+
+.grid li figcaption .meta {
+  display: flex;
+  align-items: center;
+  margin-top: .5em;
+}
+
+.grid li figcaption .meta .copy {
+  display: inline-block;
+  margin-left: auto;
+  padding: .05em .5em;
+  font-size: .65em;
+  line-height: 1.5;
+  color: #0f7595;
+  background: #fff;
+  border: 1px solid #0f7595;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+.grid li figcaption .meta .copy:hover {
+  background: #0f7595;
+  color: #fff;
+}
+
+.grid li figcaption .meta .copy:active {
+  background: #0b5f79;
+}
+
+.grid li figcaption .meta .copy.copied {
+  color: #0f7595;
+  border-color: #0f7595;
+  background: #e8f4f8;
+  cursor: default;
+}
+
+footer {
+  display: block;
+  margin: 0;
+  padding: 0 3em 3em;
+}
+
+footer p {
+  margin: 0;
+  font-size: .7em;
+}
+
+footer a {
+  color: #0f7595;
+  margin-left: 0;
+}
+
+/*
+Sprite shape dimensions
+====================================================================================================
+You will need to set the sprite shape dimensions via CSS when you use them as SVGs, otherwise
+they would become a huge 100% in size. You may use the following dimension classes for doing so.
+They might well be outsourced to an external stylesheet of course.
+*/
+
+.svg-accessibility-dims { width: 24px; height: 24px; }
+.svg-accessibility_new-dims { width: 24px; height: 24px; }
+.svg-arrow_forward-dims { width: 24px; height: 24px; }
+.svg-boy-dims { width: 24px; height: 24px; }
+.svg-check-dims { width: 24px; height: 24px; }
+.svg-elderly-dims { width: 24px; height: 24px; }
+.svg-elderly_woman-dims { width: 24px; height: 24px; }
+.svg-planner_review-dims { width: 24px; height: 24px; }
+.svg-woman-dims { width: 24px; height: 24px; }
+
+    </style>
+
+  </head>
+  <body>
+
+    <header>
+      <h1>SVG <code>&lt;symbol&gt;</code> sprite preview (external)</h1>
+      <p>This preview features the use of the generated sprite. Please have a look at the HTML source for further details and be aware of the following constraints:</p>
+      <ul class="grid">
+        <li>Your browser has to <a href="https://caniuse.com/svg-html5" target="_blank" rel="noopener noreferrer">support SVG in HTML</a> for these techniques to work.</li>
+        <li><strong>Open this page from a directory URL ending in a slash</strong> (e.g. <code>…/icons/</code>). Without the trailing slash the relative reference to the sprite file resolves against the parent directory, so no icons will show.</li>
+      </ul>
+    </header>
+
+    
+
+
+
+
+
+    <section>
+
+<!--
+SVG with <use> references
+====================================================================================================
+These SVG images reference the sprite either by URL + fragment identifier (external sprite) or by a
+document-internal ID (embedded sprite). They may be styled via CSS.
+-->
+
+      <h3>SVG with <code>&lt;use&gt;</code> references</h3>
+      <ul class="grid">
+
+        <li title="accessibility">
+          <figure>
+            <div class="icon-box">
+              <svg class="svg-accessibility-dims">
+                <use href="svg/sprite.css.svg#accessibility"></use>
+              </svg>
+            </div>
+            <figcaption title="accessibility, 286 Bytes">
+  <span class="name">accessibility</span>
+  <span class="meta">
+    
+    <span class="file-size">286 Bytes</span>
+    
+    <button type="button" class="copy" data-copy="accessibility" data-copy-label="Copy ID">Copy ID</button>
+  </span>
+</figcaption>
+          </figure>
+        </li>
+
+        <li title="accessibility_new">
+          <figure>
+            <div class="icon-box">
+              <svg class="svg-accessibility_new-dims">
+                <use href="svg/sprite.css.svg#accessibility_new"></use>
+              </svg>
+            </div>
+            <figcaption title="accessibility_new, 366 Bytes">
+  <span class="name">accessibility_new</span>
+  <span class="meta">
+    
+    <span class="file-size">366 Bytes</span>
+    
+    <button type="button" class="copy" data-copy="accessibility_new" data-copy-label="Copy ID">Copy ID</button>
+  </span>
+</figcaption>
+          </figure>
+        </li>
+
+        <li title="arrow_forward">
+          <figure>
+            <div class="icon-box">
+              <svg class="svg-arrow_forward-dims">
+                <use href="svg/sprite.css.svg#arrow_forward"></use>
+              </svg>
+            </div>
+            <figcaption title="arrow_forward, 175 Bytes">
+  <span class="name">arrow_forward</span>
+  <span class="meta">
+    
+    <span class="file-size">175 Bytes</span>
+    
+    <button type="button" class="copy" data-copy="arrow_forward" data-copy-label="Copy ID">Copy ID</button>
+  </span>
+</figcaption>
+          </figure>
+        </li>
+
+        <li title="boy">
+          <figure>
+            <div class="icon-box">
+              <svg class="svg-boy-dims">
+                <use href="svg/sprite.css.svg#boy"></use>
+              </svg>
+            </div>
+            <figcaption title="boy, 317 Bytes">
+  <span class="name">boy</span>
+  <span class="meta">
+    
+    <span class="file-size">317 Bytes</span>
+    
+    <button type="button" class="copy" data-copy="boy" data-copy-label="Copy ID">Copy ID</button>
+  </span>
+</figcaption>
+          </figure>
+        </li>
+
+        <li title="check">
+          <figure>
+            <div class="icon-box">
+              <svg class="svg-check-dims">
+                <use href="svg/sprite.css.svg#check"></use>
+              </svg>
+            </div>
+            <figcaption title="check, 163 Bytes">
+  <span class="name">check</span>
+  <span class="meta">
+    
+    <span class="file-size">163 Bytes</span>
+    
+    <button type="button" class="copy" data-copy="check" data-copy-label="Copy ID">Copy ID</button>
+  </span>
+</figcaption>
+          </figure>
+        </li>
+
+        <li title="elderly">
+          <figure>
+            <div class="icon-box">
+              <svg class="svg-elderly-dims">
+                <use href="svg/sprite.css.svg#elderly"></use>
+              </svg>
+            </div>
+            <figcaption title="elderly, 529 Bytes">
+  <span class="name">elderly</span>
+  <span class="meta">
+    
+    <span class="file-size">529 Bytes</span>
+    
+    <button type="button" class="copy" data-copy="elderly" data-copy-label="Copy ID">Copy ID</button>
+  </span>
+</figcaption>
+          </figure>
+        </li>
+
+        <li title="elderly_woman">
+          <figure>
+            <div class="icon-box">
+              <svg class="svg-elderly_woman-dims">
+                <use href="svg/sprite.css.svg#elderly_woman"></use>
+              </svg>
+            </div>
+            <figcaption title="elderly_woman, 543 Bytes">
+  <span class="name">elderly_woman</span>
+  <span class="meta">
+    
+    <span class="file-size">543 Bytes</span>
+    
+    <button type="button" class="copy" data-copy="elderly_woman" data-copy-label="Copy ID">Copy ID</button>
+  </span>
+</figcaption>
+          </figure>
+        </li>
+
+        <li title="planner_review">
+          <figure>
+            <div class="icon-box">
+              <svg class="svg-planner_review-dims">
+                <use href="svg/sprite.css.svg#planner_review"></use>
+              </svg>
+            </div>
+            <figcaption title="planner_review, 211 Bytes">
+  <span class="name">planner_review</span>
+  <span class="meta">
+    
+    <span class="file-size">211 Bytes</span>
+    
+    <button type="button" class="copy" data-copy="planner_review" data-copy-label="Copy ID">Copy ID</button>
+  </span>
+</figcaption>
+          </figure>
+        </li>
+
+        <li title="woman">
+          <figure>
+            <div class="icon-box">
+              <svg class="svg-woman-dims">
+                <use href="svg/sprite.css.svg#woman"></use>
+              </svg>
+            </div>
+            <figcaption title="woman, 308 Bytes">
+  <span class="name">woman</span>
+  <span class="meta">
+    
+    <span class="file-size">308 Bytes</span>
+    
+    <button type="button" class="copy" data-copy="woman" data-copy-label="Copy ID">Copy ID</button>
+  </span>
+</figcaption>
+          </figure>
+        </li>
+
+      </ul>
+    </section>
+    <section>
+
+<!--
+SVG, sized by viewBox only (stacksvg-style)
+====================================================================================================
+This method needs no CSS at all: the SVG is sized by a single `width` (or `height`) attribute and the
+missing other dimension is derived from the shape's viewBox — the same technique the
+[stacksvg](https://github.com/stacksvg/stacksvg) project relies on.
+-->
+
+      <h3>SVG, sized by viewBox only (stacksvg-style)</h3>
+      <ul class="grid">
+
+        <li title="accessibility">
+          <figure>
+            <div class="icon-box">
+              <svg viewBox="0 0 24 24" width="1.5em">
+                <use href="svg/sprite.css.svg#accessibility"></use>
+              </svg>
+            </div>
+            <figcaption title="accessibility, 286 Bytes">
+  <span class="name">accessibility</span>
+  <span class="meta">
+    
+    <span class="file-size">286 Bytes</span>
+    
+    <button type="button" class="copy" data-copy="accessibility" data-copy-label="Copy ID">Copy ID</button>
+  </span>
+</figcaption>
+          </figure>
+        </li>
+
+        <li title="accessibility_new">
+          <figure>
+            <div class="icon-box">
+              <svg viewBox="0 0 24 24" width="1.5em">
+                <use href="svg/sprite.css.svg#accessibility_new"></use>
+              </svg>
+            </div>
+            <figcaption title="accessibility_new, 366 Bytes">
+  <span class="name">accessibility_new</span>
+  <span class="meta">
+    
+    <span class="file-size">366 Bytes</span>
+    
+    <button type="button" class="copy" data-copy="accessibility_new" data-copy-label="Copy ID">Copy ID</button>
+  </span>
+</figcaption>
+          </figure>
+        </li>
+
+        <li title="arrow_forward">
+          <figure>
+            <div class="icon-box">
+              <svg viewBox="0 0 24 24" width="1.5em">
+                <use href="svg/sprite.css.svg#arrow_forward"></use>
+              </svg>
+            </div>
+            <figcaption title="arrow_forward, 175 Bytes">
+  <span class="name">arrow_forward</span>
+  <span class="meta">
+    
+    <span class="file-size">175 Bytes</span>
+    
+    <button type="button" class="copy" data-copy="arrow_forward" data-copy-label="Copy ID">Copy ID</button>
+  </span>
+</figcaption>
+          </figure>
+        </li>
+
+        <li title="boy">
+          <figure>
+            <div class="icon-box">
+              <svg viewBox="0 0 24 24" width="1.5em">
+                <use href="svg/sprite.css.svg#boy"></use>
+              </svg>
+            </div>
+            <figcaption title="boy, 317 Bytes">
+  <span class="name">boy</span>
+  <span class="meta">
+    
+    <span class="file-size">317 Bytes</span>
+    
+    <button type="button" class="copy" data-copy="boy" data-copy-label="Copy ID">Copy ID</button>
+  </span>
+</figcaption>
+          </figure>
+        </li>
+
+        <li title="check">
+          <figure>
+            <div class="icon-box">
+              <svg viewBox="0 0 24 24" width="1.5em">
+                <use href="svg/sprite.css.svg#check"></use>
+              </svg>
+            </div>
+            <figcaption title="check, 163 Bytes">
+  <span class="name">check</span>
+  <span class="meta">
+    
+    <span class="file-size">163 Bytes</span>
+    
+    <button type="button" class="copy" data-copy="check" data-copy-label="Copy ID">Copy ID</button>
+  </span>
+</figcaption>
+          </figure>
+        </li>
+
+        <li title="elderly">
+          <figure>
+            <div class="icon-box">
+              <svg viewBox="0 0 24 24" width="1.5em">
+                <use href="svg/sprite.css.svg#elderly"></use>
+              </svg>
+            </div>
+            <figcaption title="elderly, 529 Bytes">
+  <span class="name">elderly</span>
+  <span class="meta">
+    
+    <span class="file-size">529 Bytes</span>
+    
+    <button type="button" class="copy" data-copy="elderly" data-copy-label="Copy ID">Copy ID</button>
+  </span>
+</figcaption>
+          </figure>
+        </li>
+
+        <li title="elderly_woman">
+          <figure>
+            <div class="icon-box">
+              <svg viewBox="0 0 24 24" width="1.5em">
+                <use href="svg/sprite.css.svg#elderly_woman"></use>
+              </svg>
+            </div>
+            <figcaption title="elderly_woman, 543 Bytes">
+  <span class="name">elderly_woman</span>
+  <span class="meta">
+    
+    <span class="file-size">543 Bytes</span>
+    
+    <button type="button" class="copy" data-copy="elderly_woman" data-copy-label="Copy ID">Copy ID</button>
+  </span>
+</figcaption>
+          </figure>
+        </li>
+
+        <li title="planner_review">
+          <figure>
+            <div class="icon-box">
+              <svg viewBox="0 0 24 24" width="1.5em">
+                <use href="svg/sprite.css.svg#planner_review"></use>
+              </svg>
+            </div>
+            <figcaption title="planner_review, 211 Bytes">
+  <span class="name">planner_review</span>
+  <span class="meta">
+    
+    <span class="file-size">211 Bytes</span>
+    
+    <button type="button" class="copy" data-copy="planner_review" data-copy-label="Copy ID">Copy ID</button>
+  </span>
+</figcaption>
+          </figure>
+        </li>
+
+        <li title="woman">
+          <figure>
+            <div class="icon-box">
+              <svg viewBox="0 0 24 24" width="1.5em">
+                <use href="svg/sprite.css.svg#woman"></use>
+              </svg>
+            </div>
+            <figcaption title="woman, 308 Bytes">
+  <span class="name">woman</span>
+  <span class="meta">
+    
+    <span class="file-size">308 Bytes</span>
+    
+    <button type="button" class="copy" data-copy="woman" data-copy-label="Copy ID">Copy ID</button>
+  </span>
+</figcaption>
+          </figure>
+        </li>
+
+      </ul>
+    </section>
+
+
+    <footer>
+  <p>Generated at Sun, 11 Oct 2026 23:10:44 GMT by <a href="https://github.com/svgforge/svgforge" target="_blank" rel="noopener noreferrer">svgforge</a>.</p>
+</footer>
+
+<!--
+Common preview behavior (shared via tmpl/common/preview.js)
+====================================================================================================
+-->
+
+<script>
+(function () {
+  function onCopied(button) {
+    button.classList.add('copied');
+    button.textContent = 'Copied';
+    setTimeout(() => {
+      button.classList.remove('copied');
+      button.textContent = button.dataset.copyLabel;
+    }, 1500);
+  }
+
+  document.addEventListener('click', (event) => {
+    const button = event.target.closest('[data-copy]');
+    if (button) {
+      navigator.clipboard.writeText(button.dataset.copy.trim()).then(() => onCopied(button));
+    }
+  });
+}());
+
+</script>
+  </body>
+</html>

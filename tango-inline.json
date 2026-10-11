@@ -1,0 +1,13 @@
+{
+  "dest": "./dist/tango-inline",
+  "mode": {
+    "symbol": {
+      "sprite": "sprite.svg",
+      "render": {
+        "css": false
+      },
+      "example": true,
+      "inline": true
+    }
+  }
+}
